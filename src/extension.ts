@@ -60,13 +60,15 @@ export function activate(context: vscode.ExtensionContext) {
 
 	vscode.window.onDidChangeTextEditorSelection(event => {
 		if (event && event.textEditor.document && event.textEditor.document.languageId === "markdown") {
-			const currentUri = event.textEditor.document.uri.path;
-			if (currentUri === previousUri) {
-				return;
+			if (event.textEditor.viewColumn === 1) {
+				const currentUri = event.textEditor.document.uri.path;
+				if (currentUri === previousUri) {
+					return;
+				}
+				previousUri = currentUri;
+				// openMarkdownPreviewSideBySide();
+				showFirstWikiLink(event.textEditor.document);
 			}
-			previousUri = currentUri;
-			// openMarkdownPreviewSideBySide();
-			showFirstWikiLink(event.textEditor.document);
 		}
 	});
 
