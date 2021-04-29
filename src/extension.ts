@@ -35,7 +35,7 @@ export function activate(context: vscode.ExtensionContext) {
 		if (alreadyOpenedFirstMarkdown) {
 			return;
 		}
-		vscode.window.showInformationMessage('Tried to preview!');
+		// vscode.window.showInformationMessage('Tried to preview!');
 		let editor = window.activeTextEditor;
 		if (editor) {
 			let doc = editor.document;
@@ -85,14 +85,14 @@ async function showFirstWikiLink(document: TextDocument) {
 	if (editor === undefined) {
 		return;
 	}
-	vscode.window.showInformationMessage('Doc opened: ' + editor.document.fileName);
+	// vscode.window.showInformationMessage('Doc opened: ' + editor.document.fileName);
     const fullText = await generateTocText(editor.document);
 	const re = /\[\[[\w-]+\]\]/;
 	const firstLink = fullText.match(re);
 	if (firstLink) {
 		const notes = await vscode.commands.executeCommand<Note[]>('vscodeMarkdownNotes.notesForWikiLink', firstLink[0]);
 		if (notes) {
-			vscode.window.showInformationMessage('First Link: ' + notes[0].fsPath);
+			// vscode.window.showInformationMessage('First Link: ' + notes[0].fsPath);
 			openInPreviewEditor(notes[0].fsPath);
 		}
 	}
