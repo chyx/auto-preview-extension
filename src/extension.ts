@@ -62,6 +62,9 @@ export function activate(context: vscode.ExtensionContext) {
 			if (window.activeTextEditor?.viewColumn === 1) {
 				showFirstWikiLink(window.activeTextEditor?.document, 2);
 			}
+			if (window.activeTextEditor?.viewColumn === 2) {
+				showFirstWikiLink(window.activeTextEditor?.document, 3);
+			}
 		}
 	});
 }
