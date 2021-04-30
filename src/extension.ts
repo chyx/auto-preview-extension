@@ -88,7 +88,7 @@ async function openInPreviewEditor(uri: string, viewColumn: number) {
 	const previousColumn = window.activeTextEditor?.viewColumn;
 	const previousDocument = window.activeTextEditor?.document;
 	const column: TextDocumentShowOptions = {
-		viewColumn: 2,
+		viewColumn: viewColumn,
 		preserveFocus: true
 	};
 	const document = await vscode.workspace.openTextDocument(vscode.Uri.file(uri));
