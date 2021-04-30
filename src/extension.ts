@@ -79,7 +79,7 @@ async function showFirstWikiLink(document: TextDocument) {
 		const notes = await vscode.commands.executeCommand<Note[]>('vscodeMarkdownNotes.notesForWikiLink', firstLink[0]);
 		if (notes) {
 			// vscode.window.showInformationMessage('First Link: ' + notes[0].fsPath);
-			openInPreviewEditor(notes[0].fsPath);
+			openInPreviewEditor(notes[0].fsPath, viewColumn);
 		}
 	}
 }
