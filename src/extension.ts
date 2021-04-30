@@ -62,12 +62,6 @@ export function activate(context: vscode.ExtensionContext) {
 	vscode.workspace.onWillSaveTextDocument((event) => {
 		if (event && event.document && event.document.languageId === "markdown") {
 			if (window.activeTextEditor?.viewColumn === 1) {
-				const currentUri = window.activeTextEditor?.document.uri.path;
-				// if (currentUri === previousUri) {
-				// 	return;
-				// }
-				previousUri = currentUri;
-				// openMarkdownPreviewSideBySide();
 				showFirstWikiLink(window.activeTextEditor?.document);
 			}
 		}
