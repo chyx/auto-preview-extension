@@ -63,9 +63,9 @@ export function activate(context: vscode.ExtensionContext) {
 		if (event && event.document && event.document.languageId === "markdown") {
 			if (window.activeTextEditor?.viewColumn === 1) {
 				const currentUri = window.activeTextEditor?.document.uri.path;
-				if (currentUri === previousUri) {
-					return;
-				}
+				// if (currentUri === previousUri) {
+				// 	return;
+				// }
 				previousUri = currentUri;
 				// openMarkdownPreviewSideBySide();
 				showFirstWikiLink(window.activeTextEditor?.document);
@@ -100,15 +100,16 @@ async function showFirstWikiLink(document: TextDocument) {
 }
 
 async function openInPreviewEditor(uri: string) {
-	const previsouColumn = window.activeTextEditor?.viewColumn;
+	const previousColumn = window.activeTextEditor?.viewColumn;
 	const previousDocument = window.activeTextEditor?.document;
 	const column: TextDocumentShowOptions = {
-		viewColumn: 2
+		viewColumn: 2,
+		preserveFocus: true
 	};
 	const document = await vscode.workspace.openTextDocument(vscode.Uri.file(uri));
 	await window.showTextDocument(document, column);
 	if (previousDocument) {
-		window.showTextDocument(previousDocument, previsouColumn);
+		window.showTextDocument(previousDocument, previousColumn);
 	}
 }
 
