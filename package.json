@@ -2,8 +2,9 @@
   "name": "autopreview",
   "displayName": "AutoPreview",
   "publisher": "chyx111",
+  "repository": "git@github.com:chyx/auto-preview-extension.git",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -12,7 +13,8 @@
   ],
   "activationEvents": [
     "onCommand:autopreview.helloWorld",
-    "onCommand:autopreview.debug"
+    "onCommand:autopreview.debug",
+    "onLanguage:markdown"
   ],
   "main": "./out/extension.js",
   "contributes": {
