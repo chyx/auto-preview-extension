@@ -17,7 +17,6 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('autopreview.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
-		// showFirstWikiLink();
 	});
 
 	let disposable2 = vscode.commands.registerCommand('autopreview.debug', () => {
@@ -66,13 +65,6 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 		}
 	});
-
-	// vscode.workspace.onDidOpenTextDocument((doc) => {
-	// 	if (doc && doc.languageId === "markdown") {
-	// 		// openMarkdownPreviewSideBySide();
-	// 		showFirstWikiLink(doc);
-	// 	}
-	// });
 }
 
 async function showFirstWikiLink(document: TextDocument) {
