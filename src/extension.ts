@@ -60,7 +60,7 @@ export function activate(context: vscode.ExtensionContext) {
 	vscode.workspace.onWillSaveTextDocument((event) => {
 		if (event && event.document && event.document.languageId === "markdown") {
 			if (window.activeTextEditor?.viewColumn === 1) {
-				showFirstWikiLink(window.activeTextEditor?.document);
+				showFirstWikiLink(window.activeTextEditor?.document, 2);
 			}
 		}
 	});
