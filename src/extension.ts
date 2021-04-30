@@ -58,26 +58,27 @@ export function activate(context: vscode.ExtensionContext) {
 	// 	});
 	// }
 
-	vscode.window.onDidChangeTextEditorSelection(event => {
-		if (event && event.textEditor.document && event.textEditor.document.languageId === "markdown") {
-			if (event.textEditor.viewColumn === 1) {
-				const currentUri = event.textEditor.document.uri.path;
+	// vscode.window.onDidChangeTextEditorSelection(event => {
+	vscode.workspace.onWillSaveTextDocument((event) => {
+		if (event && event.document && event.document.languageId === "markdown") {
+			if (window.activeTextEditor?.viewColumn === 1) {
+				const currentUri = window.activeTextEditor?.document.uri.path;
 				if (currentUri === previousUri) {
 					return;
 				}
 				previousUri = currentUri;
 				// openMarkdownPreviewSideBySide();
-				showFirstWikiLink(event.textEditor.document);
+				showFirstWikiLink(window.activeTextEditor?.document);
 			}
 		}
 	});
 
-	vscode.workspace.onDidOpenTextDocument((doc) => {
-		if (doc && doc.languageId === "markdown") {
-			// openMarkdownPreviewSideBySide();
-			showFirstWikiLink(doc);
-		}
-	});
+	// vscode.workspace.onDidOpenTextDocument((doc) => {
+	// 	if (doc && doc.languageId === "markdown") {
+	// 		// openMarkdownPreviewSideBySide();
+	// 		showFirstWikiLink(doc);
+	// 	}
+	// });
 }
 
 async function showFirstWikiLink(document: TextDocument) {

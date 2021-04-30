@@ -1,6 +1,7 @@
 {
   "name": "autopreview",
   "displayName": "AutoPreview",
+  "publisher": "chyx111",
   "description": "",
   "version": "0.0.1",
   "engines": {
