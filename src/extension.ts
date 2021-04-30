@@ -84,7 +84,7 @@ async function showFirstWikiLink(document: TextDocument) {
 	}
 }
 
-async function openInPreviewEditor(uri: string) {
+async function openInPreviewEditor(uri: string, viewColumn: number) {
 	const previousColumn = window.activeTextEditor?.viewColumn;
 	const previousDocument = window.activeTextEditor?.document;
 	const column: TextDocumentShowOptions = {
