@@ -102,7 +102,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 		window.showInformationMessage('Current editor not found.');
 		return
 	}
-	const nextColumn = column + 1;
+	const previousColumn = column + 1;
 	const document = window.activeTextEditor?.document;
 	const position = window.activeTextEditor?.selection.active;
 	if (document && position) {
