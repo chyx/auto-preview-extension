@@ -91,6 +91,10 @@ async function generateTocText(doc: TextDocument): Promise<string> {
 	return doc.getText();
 }
 
+function showCurrentWikiLink() {
+
+}
+
 
 const close_other_editor_command_id = "workbench.action.closeEditorsInOtherGroups";
 const markdown_preview_command_id = "markdown.showPreviewToSide";
