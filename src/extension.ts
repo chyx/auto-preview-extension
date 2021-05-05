@@ -96,6 +96,28 @@ async function openWikiLinkOnTheNextEditorColumn() {
 	}
 }
 
+async function openWikiLinkOnThePreviousEditorColumn() {
+	const column = window.activeTextEditor?.viewColumn;
+	if (!column) {
+		window.showInformationMessage('Current editor not found.');
+		return
+	}
+	const nextColumn = column + 1;
+	const document = window.activeTextEditor?.document;
+	const position = window.activeTextEditor?.selection.active;
+	if (document && position) {
+		const wikiLink = getCurrentWikiLink(document, position);
+		if (wikiLink) {
+			const notes = await vscode.commands.executeCommand<Note[]>('vscodeMarkdownNotes.notesForWikiLink', wikiLink);
+			if (notes) {
+				await openInPreviewEditor(notes[0].fsPath, nextColumn, false);
+				vscode.commands.executeCommand('workbench.action.closeOtherEditors');
+			}
+		}
+	}
+}
+
+
 async function openInPreviewEditor(uri: string, viewColumn: number, preserveFocus: boolean) {
 	const previousColumn = window.activeTextEditor?.viewColumn;
 	const previousDocument = window.activeTextEditor?.document;
