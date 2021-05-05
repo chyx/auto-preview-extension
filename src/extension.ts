@@ -80,6 +80,12 @@ async function showFirstWikiLink(document: TextDocument, viewColumn: number) {
 
 function openWikiLinkOnTheNextEditorColumn() {
 	const column = window.activeTextEditor?.viewColumn;
+	if (!column) {
+		window.showInformationMessage('Current editor not found.');
+		return
+	}
+	const nextColumn = column + 1;
+	if ()
 				showFirstWikiLink(window.activeTextEditor?.document, 2);
 			}
 
