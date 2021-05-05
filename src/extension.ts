@@ -106,6 +106,7 @@ export function showCurrentWikiLink(document: vscode.TextDocument, position: vsc
 		// keep the end
 		let r = new vscode.Range(s, e);
 		const ref = document.getText(r);
+		window.showInformationMessage('WikiLink is: ' + ref);
 	}
 }
 
