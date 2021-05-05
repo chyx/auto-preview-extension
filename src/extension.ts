@@ -78,7 +78,7 @@ async function showFirstWikiLink(document: TextDocument, viewColumn: number) {
 	}
 }
 
-function openWikiLinkOnTheNextEditorColumn() {
+async function openWikiLinkOnTheNextEditorColumn() {
 	const column = window.activeTextEditor?.viewColumn;
 	if (!column) {
 		window.showInformationMessage('Current editor not found.');
