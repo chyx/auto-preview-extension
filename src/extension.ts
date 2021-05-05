@@ -90,7 +90,7 @@ function openWikiLinkOnTheNextEditorColumn() {
 	if (document && position) {
 		const wikiLink = getCurrentWikiLink(document, position);
 		if (wikiLink) {
-			onst notes = await vscode.commands.executeCommand<Note[]>('vscodeMarkdownNotes.notesForWikiLink', firstLink[0]);
+			const notes = await vscode.commands.executeCommand<Note[]>('vscodeMarkdownNotes.notesForWikiLink', wikiLink);
 		}
 	}
 }
