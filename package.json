@@ -4,7 +4,7 @@
   "publisher": "chyx111",
   "repository": "git@github.com:chyx/auto-preview-extension.git",
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.55.0"
   },
