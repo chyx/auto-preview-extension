@@ -105,9 +105,6 @@ async function openInPreviewEditor(uri: string, viewColumn: number, preserveFocu
 	};
 	const document = await vscode.workspace.openTextDocument(vscode.Uri.file(uri));
 	await window.showTextDocument(document, column);
-	if (previousDocument) {
-		window.showTextDocument(previousDocument, previousColumn);
-	}
 }
 
 async function generateTocText(doc: TextDocument): Promise<string> {
