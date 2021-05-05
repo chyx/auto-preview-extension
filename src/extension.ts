@@ -102,7 +102,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 		window.showInformationMessage('Current editor not found.');
 		return
 	}
-	const previousColumn = vscode.ViewColumn.One == 1 ? vscode.ViewColumn.One : column - 1;
+	const previousColumn = vscode.ViewColumn.One == column ? vscode.ViewColumn.One : column - 1;
 	const document = window.activeTextEditor?.document;
 	const position = window.activeTextEditor?.selection.active;
 	if (document && position) {
@@ -113,7 +113,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 				await openInPreviewEditor(notes[0].fsPath, previousColumn, false);
 			}
 		} else {
-
+			// vscode.window.visibleTextEditors[]
 		}
 	}
 }
