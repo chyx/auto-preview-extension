@@ -17,6 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('autopreview.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
+		vscode.commands.
 	});
 
 	let disposable2 = vscode.commands.registerCommand('autopreview.debug', () => {
