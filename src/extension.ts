@@ -20,6 +20,11 @@ export function activate(context: vscode.ExtensionContext) {
 		// The code you place here will be executed every time your command is executed
 	});
 
+	let disposable = vscode.commands.registerCommand('autopreview.helloWorld', () => {
+		openWikiLinkOnTheNextEditorColumn();
+		// The code you place here will be executed every time your command is executed
+	});
+
 	let disposable2 = vscode.commands.registerCommand('autopreview.debug', () => {
 		// The code you place here will be executed every time your command is executed
 	});
