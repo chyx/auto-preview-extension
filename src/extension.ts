@@ -133,7 +133,6 @@ async function openInPreviewEditor(document: vscode.TextDocument, viewColumn: nu
 		viewColumn: viewColumn,
 		preserveFocus: preserveFocus
 	};
-	const document = await vscode.workspace.openTextDocument(vscode.Uri.file(uri));
 	await window.showTextDocument(document, column);
 }
 
