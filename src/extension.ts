@@ -18,6 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('autopreview.helloWorld', () => {
 		const document = window.activeTextEditor?.document;
 		const position = window.activeTextEditor?.selection.active;
+		window.showInformationMessage(JSON.stringify(window.activeTextEditor?.selection));
 		if (document && position) {
 			showCurrentWikiLink(document, position);
 		}
