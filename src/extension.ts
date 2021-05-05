@@ -79,6 +79,9 @@ async function showFirstWikiLink(document: TextDocument, viewColumn: number) {
 }
 
 function openWikiLinkOnTheNextEditorColumn() {
+	const column = window.activeTextEditor?.viewColumn;
+				showFirstWikiLink(window.activeTextEditor?.document, 2);
+			}
 
 }
 
