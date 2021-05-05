@@ -85,6 +85,7 @@ function openWikiLinkOnTheNextEditorColumn() {
 		return
 	}
 	const nextColumn = column + 1;
+	const wikiLink = getCurrentWikiLink(window.activeTextEditor?.document, )
 }
 
 async function openInPreviewEditor(uri: string, viewColumn: number) {
