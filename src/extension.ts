@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 		const document = window.activeTextEditor?.document;
 		const position = window.activeTextEditor?.selection.active;
 		if (document && position) {
-			showCurrentWikiLink(document, position);
+			const wikiLink = getCurrentWikiLink(document, position);
 		}
 		// The code you place here will be executed every time your command is executed
 	});
@@ -97,7 +97,7 @@ async function generateTocText(doc: TextDocument): Promise<string> {
 }
 
 const RxWikiLink = '\\[\\[[^\\]]+\\]\\]'; // [[wiki-link-regex(|with potential pipe)?]] Note: "sep" will be replaced with pipedWikiLinksSeparator on compile
-function showCurrentWikiLink(document: vscode.TextDocument, position: vscode.Position) {
+function getCurrentWikiLink(document: vscode.TextDocument, position: vscode.Position) {
 	const range = document.getWordRangeAtPosition(position, new RegExp(RxWikiLink, 'gi'));
 	if (range) {
 		// Our rxWikiLink contains [[ and ]] chars
@@ -111,9 +111,9 @@ function showCurrentWikiLink(document: vscode.TextDocument, position: vscode.Pos
 		// keep the end
 		let r = new vscode.Range(s, e);
 		const ref = document.getText(r);
-		window.showInformationMessage('WikiLink is: ' + ref);
+		return ref;
 	} else {
-		window.showInformationMessage('WikiLink not found');
+		return null;
 	}
 }
 
