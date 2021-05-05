@@ -18,8 +18,8 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('autopreview.helloWorld', () => {
 		const document = window.activeTextEditor?.document;
 		const position = window.activeTextEditor?.selection.active;
-		if (document) {
-			showCurrentWikiLink(document, window.activeTextEditor?.selection.active);
+		if (document && position) {
+			showCurrentWikiLink(document, position);
 		}
 		// The code you place here will be executed every time your command is executed
 	});
