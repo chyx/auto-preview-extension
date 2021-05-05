@@ -29,20 +29,6 @@ export function activate(context: vscode.ExtensionContext) {
 	let alreadyOpenedFirstMarkdown = false;
 	let previousUri = '';
 
-	function previewFirstMarkdown() {
-		if (alreadyOpenedFirstMarkdown) {
-			return;
-		}
-		// vscode.window.showInformationMessage('Tried to preview!');
-		let editor = window.activeTextEditor;
-		if (editor) {
-			let doc = editor.document;
-			if (doc && doc.languageId === "markdown") {
-				openMarkdownPreviewSideBySide();
-				alreadyOpenedFirstMarkdown = true;
-			}
-		}
-	}
 	function openMarkdownPreviewSideBySide() {
 		commands.executeCommand(markdown_preview_command_id)
 			.then(() => { }, (e) => console.error(e));
