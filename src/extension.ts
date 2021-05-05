@@ -126,7 +126,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 	}
 }
 
-async function openInPreviewEditor(document: vscode.TextDocument, viewColumn: number, preserveFocus: boolean) {
+async function openDocumentInPreviewEditor(document: vscode.TextDocument, viewColumn: number, preserveFocus: boolean) {
 	const previousColumn = window.activeTextEditor?.viewColumn;
 	const previousDocument = window.activeTextEditor?.document;
 	const column: TextDocumentShowOptions = {
