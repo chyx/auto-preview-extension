@@ -95,7 +95,7 @@ async function openWikiLinkOnTheNextEditorColumn() {
 	}
 }
 
-async function openInPreviewEditor(uri: string, viewColumn: number) {
+async function openInPreviewEditor(uri: string, viewColumn: number, preserveFocus: boolean) {
 	const previousColumn = window.activeTextEditor?.viewColumn;
 	const previousDocument = window.activeTextEditor?.document;
 	const column: TextDocumentShowOptions = {
