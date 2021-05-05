@@ -24,7 +24,7 @@
         "title": "Hello World"
       },
       {
-        "command": "autopreview.debug",
+        "command": "autopreview.openWikiLinkInNextTab",
         "title": "Debug Preview"
       }
     ]
