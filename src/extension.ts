@@ -113,6 +113,8 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 				await openInPreviewEditor(notes[0].fsPath, previousColumn, false);
 				vscode.commands.executeCommand('workbench.action.closeOtherEditors');
 			}
+		} else {
+
 		}
 	}
 }
