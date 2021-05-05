@@ -89,7 +89,8 @@ async function openWikiLinkOnTheNextEditorColumn() {
 		if (wikiLink) {
 			const notes = await vscode.commands.executeCommand<Note[]>('vscodeMarkdownNotes.notesForWikiLink', wikiLink);
 			if (notes) {
-				openInPreviewEditor(notes[0].fsPath, nextColumn, false);
+				await openInPreviewEditor(notes[0].fsPath, nextColumn, false);
+				vscode.commands.executeCommand('workbench.action.closeOtherEditors');
 			}
 		}
 	}
