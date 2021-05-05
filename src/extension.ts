@@ -139,7 +139,7 @@ async function openDocumentInEditor(document: vscode.TextDocument, viewColumn: n
 
 async function openInPreviewEditor(uri: string, viewColumn: number, preserveFocus: boolean) {
 	const document = await vscode.workspace.openTextDocument(vscode.Uri.file(uri));
-	openDocumentInEditor(document, viewColumn, preserveFocus);
+	await openDocumentInEditor(document, viewColumn, preserveFocus);
 }
 
 async function generateTocText(doc: TextDocument): Promise<string> {
