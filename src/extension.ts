@@ -102,7 +102,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 		window.showInformationMessage('Current editor not found.');
 		return
 	}
-	const previousColumn = column + 1;
+	const previousColumn = vscode.ViewColumn.One == 1 ? vscode.ViewColumn.One : column - 1;
 	const document = window.activeTextEditor?.document;
 	const position = window.activeTextEditor?.selection.active;
 	if (document && position) {
