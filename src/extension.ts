@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// The code you place here will be executed every time your command is executed
 	});
 
-	let disposable2 = vscode.commands.registerCommand('autopreview.openWikiLinkInNext', () => {
+	let disposable2 = vscode.commands.registerCommand('autopreview.openWikiLinkInNextTab', () => {
 		openWikiLinkOnTheNextEditorColumn();
 		// The code you place here will be executed every time your command is executed
 	});
