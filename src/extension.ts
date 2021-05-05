@@ -93,6 +93,7 @@ async function generateTocText(doc: TextDocument): Promise<string> {
 
 const RxWikiLink = '\\[\\[[^sep\\]]+(sep[^sep\\]]+)?\\]\\]'; // [[wiki-link-regex(|with potential pipe)?]] Note: "sep" will be replaced with pipedWikiLinksSeparator on compile
 export function showCurrentWikiLink(document: vscode.TextDocument, position: vscode.Position): Ref {
+	const range = document.getWordRangeAtPosition(position, RxWikiLink);
 }
 
 
