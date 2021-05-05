@@ -105,7 +105,8 @@ export function showCurrentWikiLink(document: vscode.TextDocument, position: vsc
 		let e = new vscode.Position(range.end.line, range.end.character - 2);
 		// keep the end
 		let r = new vscode.Range(s, e);
-		ref = document.getText(r);
+		const ref = document.getText(r);
+	}
 }
 
 
