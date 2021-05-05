@@ -17,6 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('autopreview.helloWorld', () => {
 		const document = window.activeTextEditor?.document;
+		const position = window.activeTextEditor?.selection.active;
 		if (document) {
 			showCurrentWikiLink(document, window.activeTextEditor?.selection.active);
 		}
