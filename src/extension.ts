@@ -118,6 +118,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 				await openInPreviewEditor(notes[0].fsPath, previousColumn, false);
 			}
 		} else {
+			awiat openDocumentInPreviewEditor()
 			const editor = vscode.window.visibleTextEditors.find(editor => editor.viewColumn == previousColumn)
 			if (editor != undefined) {
 				window.showTextDocument(editor.document);
@@ -126,7 +127,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 	}
 }
 
-async function openDocumentInPreviewEditor(document: vscode.TextDocument, viewColumn: number, preserveFocus: boolean) {
+async function openDocumentInEditor(document: vscode.TextDocument, viewColumn: number, preserveFocus: boolean) {
 	const previousColumn = window.activeTextEditor?.viewColumn;
 	const previousDocument = window.activeTextEditor?.document;
 	const column: TextDocumentShowOptions = {
