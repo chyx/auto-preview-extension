@@ -78,6 +78,10 @@ async function showFirstWikiLink(document: TextDocument, viewColumn: number) {
 	}
 }
 
+function openWikiLinkOnTheNextEditorColumn() {
+
+}
+
 async function openInPreviewEditor(uri: string, viewColumn: number) {
 	const previousColumn = window.activeTextEditor?.viewColumn;
 	const previousDocument = window.activeTextEditor?.document;
