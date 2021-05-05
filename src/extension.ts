@@ -91,7 +91,7 @@ async function generateTocText(doc: TextDocument): Promise<string> {
 	return doc.getText();
 }
 
-function showCurrentWikiLink() {
+export function showCurrentWikiLink(document: vscode.TextDocument, position: vscode.Position): Ref {
 
 }
 
