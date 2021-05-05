@@ -118,10 +118,9 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 				await openInPreviewEditor(notes[0].fsPath, previousColumn, false);
 			}
 		} else {
-			await openDocumentInEditor()
 			const editor = vscode.window.visibleTextEditors.find(editor => editor.viewColumn == previousColumn)
 			if (editor != undefined) {
-				window.showTextDocument(editor.document);
+				await openDocumentInEditor(editor.document, previousColumn, false);
 			}
 		}
 	}
