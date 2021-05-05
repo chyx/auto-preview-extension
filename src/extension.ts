@@ -89,6 +89,9 @@ function openWikiLinkOnTheNextEditorColumn() {
 	const position = window.activeTextEditor?.selection.active;
 	if (document && position) {
 		const wikiLink = getCurrentWikiLink(document, position);
+		if (wikiLink) {
+
+		}
 	}
 }
 
