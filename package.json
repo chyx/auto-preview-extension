@@ -24,6 +24,10 @@
         "title": "Hello World"
       },
       {
+        "command": "autopreview.openWikiLinkInPreviousTab",
+        "title": "Open current wiki link in the previous tab."
+      },
+      {
         "command": "autopreview.openWikiLinkInNextTab",
         "title": "Open current wiki link in the next tab."
       }
