@@ -25,7 +25,7 @@
       },
       {
         "command": "autopreview.openWikiLinkInNextTab",
-        "title": "Debug Preview"
+        "title": "Open current wiki link in the next tab."
       }
     ]
   },
