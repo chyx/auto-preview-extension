@@ -4,7 +4,7 @@
   "publisher": "chyx111",
   "repository": "git@github.com:chyx/auto-preview-extension.git",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -24,8 +24,12 @@
         "title": "Hello World"
       },
       {
-        "command": "autopreview.debug",
-        "title": "Debug Preview"
+        "command": "autopreview.openWikiLinkInPreviousTab",
+        "title": "Open current wiki link in the previous tab."
+      },
+      {
+        "command": "autopreview.openWikiLinkInNextTab",
+        "title": "Open current wiki link in the next tab."
       }
     ]
   },
