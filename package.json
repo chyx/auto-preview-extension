@@ -31,6 +31,18 @@
         "command": "autopreview.openWikiLinkInNextTab",
         "title": "Open current wiki link in the next tab."
       }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+l",
+        "command": "autopreview.openWikiLinkInNextTab",
+        "when": "editorTextFocus && !inDebugRepl"
+      },
+      {
+        "key": "ctrl+h",
+        "command": "autopreview.openWikiLinkInPreviousTab",
+        "when": "editorTextFocus && !inDebugRepl"
+      }
     ]
   },
   "scripts": {
