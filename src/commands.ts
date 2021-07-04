@@ -30,7 +30,7 @@ const DEFAULT: CallTodosMethodOptions = {
   },
 };
 
-async function callTodosMethod(methodName: string) {
+async function callTodosMethod(methodName: (...args: any) => any) {
   const options: CallTodosMethodOptions = {
     ...DEFAULT,
     ...{
