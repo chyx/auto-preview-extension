@@ -14,11 +14,10 @@ class Line {
   parseRanges(
     text: string,
     rangesRaw: vscode.Range | RegExp | vscode.Range[] | RegExp[]
-  ) {
+  ): MatchRange[] {
     let negRanges = _.flatten(_.castArray(rangesRaw as any)); //TSC
 
-    return _.filter(
-      _.flatten(
+    return _.flatten(
         negRanges.map((neg) => {
           if (!neg) {
             return;
@@ -38,15 +37,14 @@ class Line {
             return ranges;
           }
         })
-      )
-    );
+      ).filter((x): x is MatchRange => x !== null);
   }
 
   getRangeDifference(
     text: string,
     posRange: vscode.Range,
     negRangesRaw: vscode.Range | RegExp | vscode.Range[] | RegExp[] = []
-  ) {
+  ):  {
     const posOffset = posRange.start.character;
 
     /* NEGATIVE RANGES */
