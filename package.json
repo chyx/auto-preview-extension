@@ -30,6 +30,10 @@
       {
         "command": "autopreview.openWikiLinkInNextTab",
         "title": "Open current wiki link in the next tab."
+      },
+      {
+        "command": "",
+        "title": "Foam Todo: "
       }
     ],
     "keybindings": [
