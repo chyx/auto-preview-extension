@@ -135,7 +135,7 @@ class Document {
       return this.getItems(TodoDone, Consts.regexes.todoDone);
     }
 
-    getTodoDoneAt(lineNumber: number, checkValidity?) {
+    getTodoDoneAt(lineNumber: number, checkValidity?: boolean) {
       return this.getItemAt(TodoDone, lineNumber, checkValidity);
     }
 
@@ -143,7 +143,7 @@ class Document {
       return this.getItems(TodoCancelled, Consts.regexes.todoCancelled);
     }
 
-    getTodoCancelledAt(lineNumber: number, checkValidity?) {
+    getTodoCancelledAt(lineNumber: number, checkValidity?: boolean) {
       return this.getItemAt(TodoCancelled, lineNumber, checkValidity);
     }
 
@@ -151,7 +151,7 @@ class Document {
       return this.getItems(TodoFinished, Consts.regexes.todoFinished);
     }
 
-    getTodoFinishedAt(lineNumber: number, checkValidity?) {
+    getTodoFinishedAt(lineNumber: number, checkValidity?: boolean) {
       return this.getItemAt(TodoFinished, lineNumber, checkValidity);
     }
 
