@@ -48,8 +48,8 @@ async function callTodosMethod(methodName) {
           _.range(selection.start.line, selection.end.line + 1)
         )
       )
-    ),
-    todos = _.filter(
+    );
+    const todos = _.filter(
       lines.map((line) => doc.getTodoAt(line, options.checkValidity))
     );
 
