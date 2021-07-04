@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 
 import { workspace, window, commands, ExtensionContext, TextDocument, TextDocumentShowOptions } from 'vscode';
+import Init from './utils/init';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -32,6 +33,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(disposable2);
+
+	Init.commands(context);
 
 	let alreadyOpenedFirstMarkdown = false;
 	let previousUri = '';
