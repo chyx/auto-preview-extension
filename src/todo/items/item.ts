@@ -11,7 +11,7 @@ class Item {
   match?: RegExpMatchArray;
   _line;
   _pos: vscode.Position | undefined;
-  _matchRange;
+  _matchRange: MatchRange;
   _range: vscode.Range | undefined;
   _text: string | undefined;
 
