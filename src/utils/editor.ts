@@ -39,7 +39,7 @@ class Editor {
 
       let index = 0;
 
-      const edits = changes.map((change) => {
+      changes.map((change) => {
           if (change.added) {
             return Editor.edits.makeInsert(change.value, lineNr, index);
           } else if (change.removed) {
@@ -55,7 +55,6 @@ class Editor {
             return null;
           }
         }).filter((x): x is vscode.TextEdit => x !== null);
-        return edits;
     }
 
     static makeDelete(lineNr: number, fromCh: number, toCh: number = fromCh) {
