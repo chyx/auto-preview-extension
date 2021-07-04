@@ -10,7 +10,6 @@ class Line {
   TYPES = [];
 
   /* RANGE */
-
   parseRanges(
     text: string,
     rangesRaw: vscode.Range | RegExp | vscode.Range[] | RegExp[]
