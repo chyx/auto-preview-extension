@@ -6,7 +6,6 @@ import { Regex, MatchRange } from "../../utils/regex";
 
 class Item {
   /* PROPERTIES */
-  textEditor: vscode.TextEditor;
   textDocument: vscode.TextDocument;
   match?: RegExpMatchArray;
   _line?: vscode.TextLine | null;
@@ -83,7 +82,6 @@ class Item {
     line?: vscode.TextLine,
     match?: RegExpMatchArray
   ) {
-    this.textEditor = textEditor || null;
     this.textDocument = textEditor.document;
     this._line = line;
     this.match = match;
