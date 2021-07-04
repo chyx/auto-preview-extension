@@ -111,7 +111,7 @@ class Line {
   getItemRanges(
     item: LineItem,
     negRanges?: vscode.Range | vscode.Range[] | RegExp | RegExp[]
-  ) {
+  ): vscode.Range[] {
     return _.isEmpty(negRanges)
       ? [item.range]
       : item.range === null
