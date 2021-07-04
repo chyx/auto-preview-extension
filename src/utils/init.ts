@@ -11,7 +11,7 @@ const Init = {
     commands.forEach ( ({ command, title }) => {
 
       const commandName = _.last ( command.split ( '.' ) ) as string,
-        handler = Commands[commandName],
+        handler = Commands.get(commandName),
         disposable = vscode.commands.registerCommand ( command, handler );
 
       context.subscriptions.push ( disposable );
