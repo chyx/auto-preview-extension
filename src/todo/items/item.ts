@@ -11,7 +11,7 @@ class Item {
   match?: RegExpMatchArray;
   _line;
   _pos: vscode.Position | undefined;
-  _matchRange: MatchRange | undefined;
+  _matchRange: MatchRange | null;
   _range: vscode.Range | undefined;
   _text: string | undefined;
 
@@ -86,6 +86,7 @@ class Item {
     this.textDocument = textEditor.document;
     this._line = line;
     this.match = match;
+    this.matchRange = null;
   }
 
   /* IS */
