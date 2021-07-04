@@ -74,6 +74,7 @@ async function callTodosMethod(methodName: (...args: any) => any) {
   }
 
   todosFiltered.map(todo => console.log(todo));
+
   todosFiltered.map((todo) => options.method.call(todo, ...options.args));
 
   const edits: TextEdit[] = _.filter(
