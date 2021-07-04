@@ -4,6 +4,7 @@ import * as vscode from "vscode";
 import Consts from "../consts";
 import Line from "./items/line";
 import Todo from "./items/todo";
+import Tag from "./items/tag";
 import TodoBox from "./items/todo_box";
 import TodoCancelled from "./items/todo_cancelled";
 import TodoDone from "./items/todo_done";
