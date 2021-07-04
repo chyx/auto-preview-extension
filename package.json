@@ -17,7 +17,7 @@
     "onCommand:autopreview.debug",
     "onLanguage:markdown"
   ],
-  "main": "./src/extension.js",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
