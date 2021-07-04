@@ -66,7 +66,6 @@ export function activate(context: vscode.ExtensionContext) {
   // 	});
   // }
 
-  // vscode.window.onDidChangeTextEditorSelection(event => {
   vscode.workspace.onWillSaveTextDocument((event) => {
     if (event && event.document && event.document.languageId === "markdown") {
       if (window.activeTextEditor?.viewColumn === 1) {
