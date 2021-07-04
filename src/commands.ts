@@ -133,8 +133,8 @@ function toggleCancelled() {
 // }
 
 /* EXPORT */
-export const MAP = {
-  'editorToggleBox': toggleBox,
-  'editorToggleDone': toggleDone,
-  'editorToggleCancelled': toggleCancelled,
-};
+export const MAP = new Map([
+  ['editorToggleBox': toggleBox],
+  ['editorToggleDone': toggleDone],
+  ['editorToggleCancelled': toggleCancelled],
+]);
