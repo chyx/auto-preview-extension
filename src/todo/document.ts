@@ -59,7 +59,7 @@ class Document {
     item: T,
     lineNumber: number,
     checkValidity = true
-  ): Item | null {
+  ): T | null {
     const line = this.textDocument.lineAt(lineNumber);
 
     if (checkValidity && !item.is(line.text)) {
