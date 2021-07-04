@@ -173,9 +173,8 @@ class Document {
   }
 
   /* IS */
-
   isSupported() {
-    return Editor.isSupported(this.textEditor);
+      return true;
   }
 }
 
