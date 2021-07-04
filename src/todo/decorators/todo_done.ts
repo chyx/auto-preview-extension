@@ -6,8 +6,8 @@ import Line from "./line";
 
 /* DECORATION TYPES */
 const TODO_DONE = vscode.window.createTextEditorDecorationType({
-  // color: Consts.colors.done,
-  backgroundColor: Consts.colors.done,
+  color: Consts.colors.done,
+  // backgroundColor: Consts.colors.done,
   rangeBehavior: vscode.DecorationRangeBehavior.ClosedOpen,
   dark: {
     color: Consts.colors.dark.done,
