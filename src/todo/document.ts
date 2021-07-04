@@ -3,7 +3,6 @@ import stringMatches from "string-matches";
 import * as vscode from "vscode";
 import Consts from "../consts";
 import Utils from "../utils";
-import Editor from "../utils/editor";
 import {
   Line,
   Archive,
@@ -70,16 +69,16 @@ class Document {
   getItemAt(
     Item:
       | typeof Line
-      | typeof Archive
-      | typeof Comment
-      | typeof Formatted
-      | typeof Project
-      | typeof Tag
-      | typeof Todo
-      | typeof TodoBox
-      | typeof TodoFinished
-      | typeof TodoDone
-      | typeof TodoCancelled,
+    //   | typeof Archive
+    //   | typeof Comment
+    //   | typeof Formatted
+    //   | typeof Project
+    //   | typeof Tag
+    //   | typeof TodoBox
+    //   | typeof TodoFinished
+    //   | typeof TodoDone
+    //   | typeof TodoCancelled
+      | typeof Todo,
     lineNumber: number,
     checkValidity = true
   ) {
