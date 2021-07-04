@@ -47,6 +47,9 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(disposable2);
 
   Init.commands(context);
+  context.subscriptions.push(
+    vscode.workspace.onDidChangeTextDocument ( ChangesDecorator.onChanges )
+  );
 
   let alreadyOpenedFirstMarkdown = false;
   let previousUri = "";
