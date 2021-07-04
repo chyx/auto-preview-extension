@@ -117,12 +117,12 @@
         "todo.symbols.done": {
           "type": "string",
           "description": "Todo done string",
-          "default": "✔"
+          "default": "[x]"
         },
         "todo.symbols.cancelled": {
           "type": "string",
           "description": "Todo cancelled string",
-          "default": "✘"
+          "default": "[-]"
         },
         "todo.colors.done": {
           "type": "string",
