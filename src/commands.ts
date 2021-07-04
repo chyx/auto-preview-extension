@@ -59,7 +59,7 @@ async function callTodosMethod(options?) {
   todosFiltered.map((todo) => todo[options.method](...options.args));
 
   const edits = _.filter(
-    _.flattenDeep(todosFiltered.map((todo) => todo["makeEdit"]()))
+    _.flattenDeep(todosFiltered.map((todo: Todo) => todo["makeEdit"]()))
   );
 
   if (!edits.length) {
