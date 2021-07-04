@@ -1,6 +1,7 @@
 import * as _ from "lodash";
 import stringMatches from "string-matches";
 import * as vscode from "vscode";
+import { TextEditorDecorationType } from "vscode";
 import { MatchRange, Regex } from "../../utils/regex";
 import LineItem from "../items/line";
 
