@@ -23,7 +23,7 @@ class TodoDone extends Line {
   getItemRanges(
     todoDone: TodoDoneItem,
     negRange?: vscode.Range | vscode.Range[]
-  ) {
+  ): {type: TextEditorDecorationType, ranges: vscode.Range[]}[] {
     return todoDone.range === null
       ? []
       : [
