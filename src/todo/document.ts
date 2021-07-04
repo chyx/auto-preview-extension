@@ -56,7 +56,7 @@ class Document {
   }
 
   getItemAt<T extends Line | Todo>(
-    item: new() => T,
+    item: new(TextEditor, TextLine) => T,
     lineNumber: number,
     checkValidity = true
   ): T | null {
