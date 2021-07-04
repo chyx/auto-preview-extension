@@ -49,7 +49,7 @@ class Document {
 
   getItems(
     Item:
-      | typeof Line
+      typeof Line
       | typeof Todo
       | typeof TodoBox
       | typeof TodoFinished
