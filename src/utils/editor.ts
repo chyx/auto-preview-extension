@@ -55,7 +55,7 @@ class Editor {
             index += change.value.length;
             return null;
           }
-      );
+        });
     }
 
     static 
