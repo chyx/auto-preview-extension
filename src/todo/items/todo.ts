@@ -228,10 +228,10 @@ class Todo extends Item {
     const match = this.lineNextText.match(Consts.regexes.todoSymbol);
     const firstChar = this.lineNextText.match(/\S/);
     const startIndex: number = match
-        ? match[0].indexOf(match[1])
-        : (firstChar
-        ? firstChar.index
-        : this.lineNextText.length);
+      ? match[0].indexOf(match[1])
+      : (firstChar
+      ? firstChar.index
+      : this.lineNextText.length);
     const endIndex: number = match ? match[0].length : startIndex;
 
     this.lineNextText = `${this.lineNextText.substring(0, startIndex)}${
