@@ -1,6 +1,6 @@
 import * as _ from "lodash";
 import * as vscode from "vscode";
-import Utils from "../../utils";
+import Regex from "../../utils/regex";
 
 /* ITEM */
 
