@@ -3,6 +3,7 @@ import stringMatches from "string-matches";
 import * as vscode from "vscode";
 import Consts from "../consts";
 import Utils from "../utils";
+import Editor from "../utils/editor";
 import {
   Line,
   Archive,
