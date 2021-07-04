@@ -22,5 +22,10 @@ class Init {
   }
 }
 
+interface Command {
+  command: string;
+  title: string;
+}
+
 /* EXPORT */
 export default Init;
