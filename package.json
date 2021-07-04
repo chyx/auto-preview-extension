@@ -63,6 +63,21 @@
           "type": "boolean",
           "description": "Enable the @done/cancelled tag. It's always enabled if you explicitly start a todo or if you use only 1 symbol",
           "default": true
+        },
+        "todo.symbols.box": {
+          "type": "string",
+          "description": "Todo box string",
+          "default": "[ ]"
+        },
+        "todo.symbols.done": {
+          "type": "string",
+          "description": "Todo done string",
+          "default": "[x]"
+        },
+        "todo.symbols.cancelled": {
+          "type": "string",
+          "description": "Todo cancelled string",
+          "default": "[-]"
         }
       }
     },
