@@ -6,7 +6,7 @@ import Todo from "./todo/items/todo";
 import Editor from "./utils/editor";
 
 /* CALL TODOS METHOD */
-interface callTodosMethodOptions {
+interface CallTodosMethodOptions {
   checkValidity: false,
   filter: _.identity,
   method: undefined,
