@@ -1,6 +1,6 @@
 import * as _ from "lodash";
 import * as vscode from "vscode";
-import Regex from "../../utils/regex";
+import {Regex, MatchRange} from "../../utils/regex";
 
 /* ITEM */
 
