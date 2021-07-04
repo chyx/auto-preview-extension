@@ -26,10 +26,10 @@ class Document {
   textDocument: vscode.TextDocument;
   text?: string;
 
-  constructor(res: string | vscode.TextEditor | vscode.TextDocument) {
-    if (_.isString(res)) {
-      this.text = res;
-    } else {
+  constructor(res: vscode.TextEditor | vscode.TextDocument) {
+    // if (_.isString(res)) {
+    //   this.text = res;
+    // } else {
       if ("document" in res) {
         // => vscode.TextEditor
 
@@ -43,7 +43,7 @@ class Document {
           vscode.window.activeTextEditor;
         this.textDocument = res as vscode.TextDocument; //TSC
       }
-    }
+    // }
   }
 
   /* GET */
