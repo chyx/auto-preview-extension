@@ -15,7 +15,7 @@ class Regex {
     return matches.map(Regex.match2range);
   }
 
-  static match2range(match: RegExpMatchArray) {
+  static match2range(match: RegExpMatchArray): MatchRange {
     const first = match[0],
       last = _.findLast(match, (txt) => txt && txt.length) as string, //TSC
       start = (match.index as number) + first.indexOf(last),
@@ -25,7 +25,7 @@ class Regex {
   }
 }
 
-interface Range {
+interface MatchRange {
   start: number;
   end: number;
 }
