@@ -490,7 +490,6 @@
     "esbuild": "npm run -S esbuild-base -- --sourcemap",
     "esbuild-watch": "npm run -S esbuild-base -- --sourcemap --watch",
     "test-compile": "tsc -p ./"
-
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",
