@@ -104,6 +104,8 @@ class Document {
     res: TextDocument = null;
     if (input instanceof vscode.TextDocument) {
       res = input;
+    } else {
+      res = input.document;
     }
 
     const doc = new DocumentModule(res);
