@@ -138,7 +138,7 @@ class Line {
   ) {
     let ranges = this.getItemsRanges(items, negRanges);
 
-    return this.types.map((type, index) => ({
+    return this.TYPES.map((type, index) => ({
       type,
       ranges: ranges[index] || [],
     }));
