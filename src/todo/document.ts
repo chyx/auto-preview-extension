@@ -26,24 +26,11 @@ class Document {
   textDocument: vscode.TextDocument;
   text?: string;
 
-  constructor(res: vscode.TextEditor | vscode.TextDocument) {
-    // if (_.isString(res)) {
-    //   this.text = res;
-    // } else {
-      if ("document" in res) {
-        // => vscode.TextEditor
-
-        this.textEditor = res as vscode.TextEditor; //TSC
-        this.textDocument = this.textEditor.document;
-      } else {
-        // => vscode.TextDocument
-
+  constructor(res: vscode.TextEditor) {
         this.textEditor =
           vscode.window.visibleTextEditors.find((te) => te.document === res) ||
           vscode.window.activeTextEditor;
         this.textDocument = res as vscode.TextDocument; //TSC
-      }
-    // }
   }
 
   /* GET */
