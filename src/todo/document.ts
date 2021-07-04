@@ -127,33 +127,33 @@ class Document {
     return this.getItemAt(TodoBox, lineNumber, checkValidity);
   }
 
-  //   getTodosBoxStarted() {
-  //     return this.getItems(TodoBox, Consts.regexes.todoBoxStarted);
-  //   }
+    getTodosBoxStarted() {
+      return this.getItems(TodoBox, Consts.regexes.todoBoxStarted);
+    }
 
-  //   getTodosDone() {
-  //     return this.getItems(TodoDone, Consts.regexes.todoDone);
-  //   }
+    getTodosDone() {
+      return this.getItems(TodoDone, Consts.regexes.todoDone);
+    }
 
-  //   getTodoDoneAt(lineNumber: number, checkValidity?) {
-  //     return this.getItemAt(TodoDone, lineNumber, checkValidity);
-  //   }
+    getTodoDoneAt(lineNumber: number, checkValidity?) {
+      return this.getItemAt(TodoDone, lineNumber, checkValidity);
+    }
 
-  //   getTodosCancelled() {
-  //     return this.getItems(TodoCancelled, Consts.regexes.todoCancelled);
-  //   }
+    getTodosCancelled() {
+      return this.getItems(TodoCancelled, Consts.regexes.todoCancelled);
+    }
 
-  //   getTodoCancelledAt(lineNumber: number, checkValidity?) {
-  //     return this.getItemAt(TodoCancelled, lineNumber, checkValidity);
-  //   }
+    getTodoCancelledAt(lineNumber: number, checkValidity?) {
+      return this.getItemAt(TodoCancelled, lineNumber, checkValidity);
+    }
 
-  //   getTodosFinished() {
-  //     return this.getItems(TodoFinished, Consts.regexes.todoFinished);
-  //   }
+    getTodosFinished() {
+      return this.getItems(TodoFinished, Consts.regexes.todoFinished);
+    }
 
-  //   getTodoFinishedAt(lineNumber: number, checkValidity?) {
-  //     return this.getItemAt(TodoFinished, lineNumber, checkValidity);
-  //   }
+    getTodoFinishedAt(lineNumber: number, checkValidity?) {
+      return this.getItemAt(TodoFinished, lineNumber, checkValidity);
+    }
 
   /* IS */
   isSupported() {
