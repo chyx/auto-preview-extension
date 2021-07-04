@@ -39,7 +39,7 @@ class Editor {
 
       let index = 0;
 
-      return changes.map((change) => {
+      const edits = changes.map((change) => {
           if (change.added) {
             return Editor.edits.makeInsert(change.value, lineNr, index);
           } else if (change.removed) {
@@ -54,10 +54,9 @@ class Editor {
             index += change.value.length;
             return null;
           }
-        });
+        }).filter((x) => x !== null);
+        return edits;
     }
-
-    static 
 
     static makeDelete(lineNr: number, fromCh: number, toCh: number = fromCh) {
       const range = new vscode.Range(lineNr, fromCh, lineNr, toCh),
