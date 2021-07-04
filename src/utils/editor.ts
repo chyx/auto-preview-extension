@@ -32,14 +32,21 @@ class Editor {
     }
 
     /* MAKE */
-    static makeDiff(before: string, after: string, lineNr: number = 0): vscode.TextEdit[] {
-      if (before === after) {return [];}
+    static makeDiff(
+      before: string,
+      after: string,
+      lineNr: number = 0
+    ): vscode.TextEdit[] {
+      if (before === after) {
+        return [];
+      }
 
       const changes = diff.diffWordsWithSpace(before, after);
 
       let index = 0;
 
-      changes.map((change) => {
+      changes
+        .map((change) => {
           if (change.added) {
             return Editor.edits.makeInsert(change.value, lineNr, index);
           } else if (change.removed) {
@@ -54,7 +61,8 @@ class Editor {
             index += change.value.length;
             return null;
           }
-        }).filter((x): x is vscode.TextEdit => x !== null);
+        })
+        .filter((x): x is vscode.TextEdit => x !== null);
     }
 
     static makeDelete(lineNr: number, fromCh: number, toCh: number = fromCh) {
@@ -71,7 +79,11 @@ class Editor {
       return edit;
     }
 
-    static makeInsert(insertion: string, lineNr: number, charNr: number): vscode.TextEdit {
+    static makeInsert(
+      insertion: string,
+      lineNr: number,
+      charNr: number
+    ): vscode.TextEdit {
       const position = new vscode.Position(lineNr, charNr),
         edit = vscode.TextEdit.insert(position, insertion);
 
@@ -90,6 +102,6 @@ class Editor {
       return edit;
     }
   };
-};
+}
 
 export default Editor;
