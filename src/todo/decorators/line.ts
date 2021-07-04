@@ -116,7 +116,7 @@ class Line {
       ? [item.range]
       : item.range === null
       ? []
-      : [this.getRangeDifference(item.text, item.range, negRanges)];
+      : this.getRangeDifference(item.text, item.range, negRanges);
   }
 
   getItemsRanges(
