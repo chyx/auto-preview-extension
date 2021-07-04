@@ -62,7 +62,7 @@ class Document {
       if (doc.isSupported()) {
         // if ( !force && !DocumentsLinesCache.didChange ( doc ) ) return; //FIXME: Decorations might get trashed, so we can't skip this work //URL: https://github.com/Microsoft/vscode/issues/50415
 
-        DocumentsLinesCache.update(doc.textEditor);
+        DocumentsLinesCache.update(doc.textDocument);
 
         const items = Document.getItems(doc);
 
