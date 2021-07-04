@@ -27,8 +27,8 @@ class Document {
   text?: string;
 
   constructor(res: vscode.TextEditor) {
-        this.textEditor = res as vscode.TextEditor; //TSC
-        this.textDocument = this.textEditor.document;
+    this.textEditor = res as vscode.TextEditor; //TSC
+    this.textDocument = this.textEditor.document;
   }
 
   /* GET */
@@ -87,33 +87,33 @@ class Document {
     return this.getItemAt(Line, lineNr, false);
   }
 
-//   getArchive() {
-//     return this.getItems(Archive, Consts.regexes.archive)[0];
-//   }
+  //   getArchive() {
+  //     return this.getItems(Archive, Consts.regexes.archive)[0];
+  //   }
 
-//   getComments() {
-//     return this.getItems(Comment, Consts.regexes.comment);
-//   }
+  //   getComments() {
+  //     return this.getItems(Comment, Consts.regexes.comment);
+  //   }
 
-//   getCommentAt(lineNumber: number, checkValidity?) {
-//     return this.getItemAt(Comment, lineNumber, checkValidity);
-//   }
+  //   getCommentAt(lineNumber: number, checkValidity?) {
+  //     return this.getItemAt(Comment, lineNumber, checkValidity);
+  //   }
 
-//   getFormatted() {
-//     return this.getItems(Formatted, Consts.regexes.formatted);
-//   }
+  //   getFormatted() {
+  //     return this.getItems(Formatted, Consts.regexes.formatted);
+  //   }
 
-//   getProjects() {
-//     return this.getItems(Project, Consts.regexes.project);
-//   }
+  //   getProjects() {
+  //     return this.getItems(Project, Consts.regexes.project);
+  //   }
 
-//   getProjectAt(lineNumber: number, checkValidity?) {
-//     return this.getItemAt(Project, lineNumber, checkValidity);
-//   }
+  //   getProjectAt(lineNumber: number, checkValidity?) {
+  //     return this.getItemAt(Project, lineNumber, checkValidity);
+  //   }
 
-//   getTags() {
-//     return this.getItems(Tag, Consts.regexes.tagSpecialNormal);
-//   }
+  //   getTags() {
+  //     return this.getItems(Tag, Consts.regexes.tagSpecialNormal);
+  //   }
 
   getTodos() {
     return this.getItems(Todo, Consts.regexes.todo);
@@ -131,33 +131,33 @@ class Document {
     return this.getItemAt(TodoBox, lineNumber, checkValidity);
   }
 
-//   getTodosBoxStarted() {
-//     return this.getItems(TodoBox, Consts.regexes.todoBoxStarted);
-//   }
+  //   getTodosBoxStarted() {
+  //     return this.getItems(TodoBox, Consts.regexes.todoBoxStarted);
+  //   }
 
-//   getTodosDone() {
-//     return this.getItems(TodoDone, Consts.regexes.todoDone);
-//   }
+  //   getTodosDone() {
+  //     return this.getItems(TodoDone, Consts.regexes.todoDone);
+  //   }
 
-//   getTodoDoneAt(lineNumber: number, checkValidity?) {
-//     return this.getItemAt(TodoDone, lineNumber, checkValidity);
-//   }
+  //   getTodoDoneAt(lineNumber: number, checkValidity?) {
+  //     return this.getItemAt(TodoDone, lineNumber, checkValidity);
+  //   }
 
-//   getTodosCancelled() {
-//     return this.getItems(TodoCancelled, Consts.regexes.todoCancelled);
-//   }
+  //   getTodosCancelled() {
+  //     return this.getItems(TodoCancelled, Consts.regexes.todoCancelled);
+  //   }
 
-//   getTodoCancelledAt(lineNumber: number, checkValidity?) {
-//     return this.getItemAt(TodoCancelled, lineNumber, checkValidity);
-//   }
+  //   getTodoCancelledAt(lineNumber: number, checkValidity?) {
+  //     return this.getItemAt(TodoCancelled, lineNumber, checkValidity);
+  //   }
 
-//   getTodosFinished() {
-//     return this.getItems(TodoFinished, Consts.regexes.todoFinished);
-//   }
+  //   getTodosFinished() {
+  //     return this.getItems(TodoFinished, Consts.regexes.todoFinished);
+  //   }
 
-//   getTodoFinishedAt(lineNumber: number, checkValidity?) {
-//     return this.getItemAt(TodoFinished, lineNumber, checkValidity);
-//   }
+  //   getTodoFinishedAt(lineNumber: number, checkValidity?) {
+  //     return this.getItemAt(TodoFinished, lineNumber, checkValidity);
+  //   }
 
   /* IS */
   isSupported() {
