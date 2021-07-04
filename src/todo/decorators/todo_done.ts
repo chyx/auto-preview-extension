@@ -24,14 +24,14 @@ class TodoDone extends Line {
   getItemRanges(
     todoDone: TodoDoneItem,
     negRange?: vscode.Range | vscode.Range[]
-  ): Range[] {
+  ): vscode.Range[] {
     return todoDone.range === null
       ? []
-      : [this.getRangeDifference(
+      : this.getRangeDifference(
           todoDone.text,
           todoDone.range,
           negRange || [Consts.regexes.tag, Consts.regexes.formattedCode]
-        )];
+        );
   }
 }
 
