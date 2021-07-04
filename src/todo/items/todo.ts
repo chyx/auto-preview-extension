@@ -230,7 +230,7 @@ class Todo extends Item {
     const startIndex: number = match
       ? match[0].indexOf(match[1])
       : (firstChar
-      ? firstChar.index
+      ? firstChar.index as number
       : this.lineNextText.length);
     const endIndex: number = match ? match[0].length : startIndex;
 
