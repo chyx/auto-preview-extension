@@ -39,9 +39,9 @@ class Document {
     item:
       | typeof Line
       //   | typeof TodoBox
-      //   | typeof TodoFinished
-      //   | typeof TodoDone
-      //   | typeof TodoCancelled
+      | typeof TodoFinished
+      | typeof TodoDone
+      | typeof TodoCancelled
       | typeof Todo,
     regex: RegExp
   ) {
@@ -56,7 +56,7 @@ class Document {
   }
 
   getItemAt<T extends Line | Todo>(
-    item: {new(...args: any): T, is(line: string): boolean},
+    item: { new (...args: any): T; is(line: string): boolean },
     lineNumber: number,
     checkValidity = true
   ): T | null {
