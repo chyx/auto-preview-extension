@@ -4,7 +4,6 @@ import * as vscode from "vscode";
 
 import {
   window,
-  commands,
   TextDocument,
   TextDocumentShowOptions,
 } from "vscode";
