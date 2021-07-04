@@ -17,8 +17,8 @@ import { TextEditorDecorationType } from "vscode";
 class DocumentsLinesCache {
   static lines: { [name: string]: string[] } = {};
 
-  static get(textEditor: vscode.TextEditor, lineNr?: number): string[] {
-    const id = textEditor.document.uri.path;
+  static get(textEditor: vscode.TextDocument, lineNr?: number): string[] {
+    const id = textEditor.uri.path;
     const lines = DocumentsLinesCache.lines[id];
 
     return lines && _.isNumber(lineNr) ? [lines[lineNr]] : lines;
