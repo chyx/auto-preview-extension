@@ -12,9 +12,9 @@ interface CallTodosMethodOptions {
   method: string;
   args: [];
   errors: {
-    invalid: "Only todos can perform this action",
-    filtered: "This todo cannot perform this action",
-  },
+    invalid: "Only todos can perform this action";
+    filtered: "This todo cannot perform this action";
+  };
 }
 
 const DEFAULT: CallTodosMethodOptions = {
@@ -32,8 +32,8 @@ async function callTodosMethod(methodName) {
   const options: CallTodosMethodOptions = {
     ...DEFAULT,
     ...{
-      method: methodName
-    }
+      method: methodName,
+    },
   };
 
   const textEditor = vscode.window.activeTextEditor;
@@ -43,15 +43,15 @@ async function callTodosMethod(methodName) {
   const doc = new Document(textEditor);
 
   const lines = _.uniq(
-      _.flatten(
-        textEditor?.selections.map((selection) =>
-          _.range(selection.start.line, selection.end.line + 1)
-        )
+    _.flatten(
+      textEditor?.selections.map((selection) =>
+        _.range(selection.start.line, selection.end.line + 1)
       )
-    );
-    const todos = _.filter(
-      lines.map((line) => doc.getTodoAt(line, options.checkValidity))
-    );
+    )
+  );
+  const todos = _.filter(
+    lines.map((line) => doc.getTodoAt(line, options.checkValidity))
+  );
 
   if (todos.length !== lines.length) {
     vscode.window.showErrorMessage(options.errors.invalid);
