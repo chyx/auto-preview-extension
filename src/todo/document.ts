@@ -174,7 +174,7 @@ class Document {
   /* IS */
 
   isSupported() {
-    return Utils.editor.isSupported(this.textEditor);
+    return Editor.isSupported(this.textEditor);
   }
 }
 
