@@ -23,13 +23,13 @@ class Consts {
           background: _.get(config, `${root}.tags.background`, []),
           foreground: _.get(config, `${root}.tags.foreground`, []),
         },
-        types: _.transform(
-          _.get(config, `${root}.types`, {}),
-          (acc, val, key: string) => {
-            acc[key.toUpperCase()] = val;
-          },
-          {}
-        ),
+        // types: _.transform(
+        //   _.get(config, `${root}.types`, {}),
+        //   (acc, val, key: string) => {
+        //     acc[key.toUpperCase()] = val;
+        //   },
+        //   {}
+        // ),
       };
     }
 
