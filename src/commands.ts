@@ -28,8 +28,13 @@ const DEFAULT: CallTodosMethodOptions = {
   },
 };
 
-async function callTodosMethod(inputOptions?) {
-  const options = CallTodosMethodOptions();
+async function callTodosMethod(methodName) {
+  const options: CallTodosMethodOptions = {
+    ...DEFAULT,
+    ...{
+      method: methodName
+    }
+  };
   // options: CallTodosMethodOptions = _.isString(inputOptions) ? { method: inputOptions } : inputOptions;
   // options = _.merge({}, callTodosMethodOptions, options);
 
