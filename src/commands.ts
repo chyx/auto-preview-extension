@@ -118,22 +118,22 @@ function toggleCancelled() {
   return callTodosMethod("toggleCancelled");
 }
 
-function toggleStart() {
-  return callTodosMethod({
-    checkValidity: true,
-    filter: (todo: Todo) => todo.isBox(),
-    method: "toggleStart",
-    errors: {
-      invalid: "Only todos can be started",
-      filtered: "Only not done/cancelled todos can be started",
-    },
-  });
-}
+// function toggleStart() {
+//   return callTodosMethod({
+//     checkValidity: true,
+//     filter: (todo: Todo) => todo.isBox(),
+//     method: "toggleStart",
+//     errors: {
+//       invalid: "Only todos can be started",
+//       filtered: "Only not done/cancelled todos can be started",
+//     },
+//   });
+// }
 
 /* EXPORT */
 export {
   toggleBox as editorToggleBox,
   toggleDone as editorToggleDone,
   toggleCancelled as editorToggleCancelled,
-  toggleStart as editorToggleStart,
+  // toggleStart as editorToggleStart,
 };
