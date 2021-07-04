@@ -54,6 +54,9 @@ class Document {
     if (res === null) {
       res = vscode.window.activeTextEditor?.document;
     } 
+    if (res === null) {
+      return;
+    }
     const statisticsStatusbar =
         Config.getKey("statistics.statusbar.enabled") !== false,
       statisticsProjects =
