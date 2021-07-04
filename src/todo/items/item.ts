@@ -16,11 +16,11 @@ class Item {
   _text: string;
 
   /* GETTERS */ // For performance reasons, trying to lazily evaluate as much as possible
-  get line(): vscode.TextLine | null {
+  get line(): vscode.TextLine {
     if (!_.isUndefined(this._line)) {
       return this._line;
     }
-    return (this._line =
+    return (this._line ===
       this.textDocument && this.matchRange
         ? this.textDocument.lineAt(this.lineNumber)
         : null);
