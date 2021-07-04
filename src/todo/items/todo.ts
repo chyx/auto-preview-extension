@@ -227,7 +227,7 @@ class Todo extends Item {
 
   setSymbol(symbol: string) {
     const match = this.lineNextText.match(Consts.regexes.todoSymbol);
-    const firstChar = this.lineNextText.match(/\S/);
+    const firstChar = this.lineNextText.match(/[\w\[\]]/);
     const startIndex: number = match
       ? match[0].indexOf(match[1])
       : firstChar
