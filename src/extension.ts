@@ -139,7 +139,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
     return;
   }
   const previousColumn =
-    vscode.ViewColumn.One == column ? vscode.ViewColumn.One : column - 1;
+    vscode.ViewColumn.One === column ? vscode.ViewColumn.One : column - 1;
   const document = window.activeTextEditor?.document;
   const position = window.activeTextEditor?.selection.active;
   if (document && position) {
