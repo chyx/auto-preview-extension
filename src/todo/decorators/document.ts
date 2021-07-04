@@ -11,6 +11,7 @@ import DocumentModule from "../document";
 import TodoDone from "./todo_done";
 import TodoCancelled from "./todo_cancelled";
 import { TextEditorDecorationType } from "vscode";
+import Tag from "./tag";
 
 /* DOCUMENTS LINES CACHE */
 
@@ -179,7 +180,7 @@ class Document {
     return _.concat(
       //   new Comment().getDecorations(items.comments),
       //   new Formatted().getDecorations(items.formatted),
-        new Tag().getDecorations(items.tags),
+      new Tag().getDecorations(items.tags),
       //   new Project().getDecorations(items.projects),
       new TodoDone().getDecorations(items.todosDone),
       new TodoCancelled().getDecorations(items.todosCancelled)
