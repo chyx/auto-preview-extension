@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import * as _ from "lodash";
-import MAP from "../commands";
+import {MAP} from "../commands";
 
 /* INIT */
 class Init {
