@@ -93,12 +93,12 @@ class Document {
       }
     }
 
-    if (statisticsStatusbar) {
-      const statusbarStatistics =
-        require("../../statusbars/statistics").default; // Avoiding a cyclic dependency
+    // if (statisticsStatusbar) {
+    //   const statusbarStatistics =
+    //     require("../../statusbars/statistics").default; // Avoiding a cyclic dependency
 
-      statusbarStatistics.update();
-    }
+    //   statusbarStatistics.update();
+    // }
   }
 
   static updateLines(res: vscode.TextDocument, lineNrs: number[]) {
