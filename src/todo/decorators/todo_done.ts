@@ -24,7 +24,7 @@ class TodoDone extends Line {
     todoDone: TodoDoneItem,
     negRange?: vscode.Range | vscode.Range[]
   ) {
-    return [
+    return todoDone.range === null ? [] : [
       this.getRangeDifference(
         todoDone.text,
         todoDone.range,
