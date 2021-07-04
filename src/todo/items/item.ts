@@ -23,7 +23,7 @@ class Item {
     return (this._line =
       this.textDocument && this.matchRange
         ? this.textDocument.lineAt(this.lineNumber)
-        : );
+        : null);
   }
 
   get lineNumber(): number {
