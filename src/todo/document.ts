@@ -1,5 +1,5 @@
 import * as _ from "lodash";
-// import stringMatches from "string-matches";
+import stringMatches from "string-matches";
 import * as vscode from "vscode";
 import Consts from "../consts";
 // import Utils from "../utils";
