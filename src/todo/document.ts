@@ -50,11 +50,11 @@ class Document {
   getItems(
     Item:
       | typeof Line
-    //   | typeof TodoBox
-    //   | typeof TodoFinished
-    //   | typeof TodoDone
-    //   | typeof TodoCancelled
-      | typeof Todo,
+      | typeof Todo
+      | typeof TodoBox
+      | typeof TodoFinished
+      | typeof TodoDone
+      | typeof TodoCancelled,
     regex: RegExp
   ) {
     const matchText = _.isString(this.text)
