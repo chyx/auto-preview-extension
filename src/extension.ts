@@ -52,12 +52,12 @@ export function activate(context: vscode.ExtensionContext) {
   let alreadyOpenedFirstMarkdown = false;
   let previousUri = "";
 
-  function openMarkdownPreviewSideBySide() {
-    commands.executeCommand(markdown_preview_command_id).then(
-      () => {},
-      (e) => console.error(e)
-    );
-  }
+//   function openMarkdownPreviewSideBySide() {
+//     commands.executeCommand(markdown_preview_command_id).then(
+//       () => {},
+//       (e) => console.error(e)
+//     );
+//   }
 
   // if (window.activeTextEditor) {
   // 	previewFirstMarkdown();
