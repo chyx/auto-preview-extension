@@ -53,6 +53,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.workspace.onDidChangeTextDocument ( ChangesDecorator.onChanges ),
     vscode.window.onDidChangeActiveTextEditor ( () => DocumentDecorator.update() )
   );
+  DocumentDecorator.update ();
 
   let alreadyOpenedFirstMarkdown = false;
   let previousUri = "";
