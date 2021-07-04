@@ -47,7 +47,7 @@ class Document {
   /* GET */
 
   getItems(
-    Item:
+    item:
       typeof Line
     //   | typeof TodoBox
     //   | typeof TodoFinished
@@ -62,7 +62,7 @@ class Document {
       matches = stringMatches(matchText, regex);
 
     return matches.map((match) => {
-      return new Item(this.textEditor, undefined, match);
+      return new item(this.textEditor, undefined, match);
     });
   }
 
