@@ -50,9 +50,8 @@ async function callTodosMethod(methodName: string) {
       )
     )
   );
-  const todos = _.filter(
-    lines.map((line) => doc.getTodoAt(line, options.checkValidity))
-  );
+  const todos = lines.map((line) => doc.getTodoAt(line, options.checkValidity))
+  .filter((x): x is Todo => x !== null);
 
   if (todos.length !== lines.length) {
     vscode.window.showErrorMessage(options.errors.invalid);
