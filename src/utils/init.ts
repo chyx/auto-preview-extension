@@ -9,7 +9,7 @@ class Init {
       ?.packageJSON.contributes;
     if (commands) {
       commands.forEach(({ command, title }) => {
-        _ = title;
+        const _ = title;
         const commandName = _.last(command.split(".")) as string;
         const handler = MAP.get(commandName);
         if (handler !== undefined) {
