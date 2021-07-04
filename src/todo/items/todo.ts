@@ -267,9 +267,8 @@ class Todo extends Item {
   }
 
   toggleDone(force: boolean = !this.isDone()) {
-    const symbol = force ? Consts.symbols.done : Consts.symbols.box,
-      state = force ? "done" : "box";
-
+    const symbol = force ? Consts.symbols.done : Consts.symbols.box;
+const state = force ? "done" : "box";
     this.setSymbolAndState(symbol, state);
   }
 
