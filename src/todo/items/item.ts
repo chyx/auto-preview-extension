@@ -34,7 +34,7 @@ class Item {
     if (this.matchRange) {
         this._pos = this.textDocument.positionAt(this.matchRange.start);
     }
-    return this._pos.line;
+    return this._pos?.line || 0;
   }
 
   get matchRange() {
