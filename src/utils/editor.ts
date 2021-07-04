@@ -32,8 +32,8 @@ class Editor {
     }
 
     /* MAKE */
-    static makeDiff(before: string, after: string, lineNr: number = 0) {
-      if (before === after) {return;}
+    static makeDiff(before: string, after: string, lineNr: number = 0): vscode.TextEdit[] {
+      if (before === after) {return [];}
 
       const changes = diff.diffWordsWithSpace(before, after);
 
