@@ -7,7 +7,7 @@ import LineItem from "../items/line";
 /* LINE */
 
 class Line {
-  static readonly TYPES = [];
+  TYPES = [];
 
   /* RANGE */
 
