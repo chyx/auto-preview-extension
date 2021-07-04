@@ -7,7 +7,7 @@ import LineItem from "../items/line";
 /* LINE */
 
 class Line {
-  TYPES = [];
+  types = [];
 
   /* RANGE */
   parseRanges(
@@ -138,7 +138,7 @@ class Line {
   ) {
     let ranges = this.getItemsRanges(items, negRanges);
 
-    return this.TYPES.map((type, index) => ({
+    return this.types.map((type, index) => ({
       type,
       ranges: ranges[index] || [],
     }));
