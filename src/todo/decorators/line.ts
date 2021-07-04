@@ -44,7 +44,7 @@ class Line {
     text: string,
     posRange: vscode.Range,
     negRangesRaw: vscode.Range | RegExp | vscode.Range[] | RegExp[] = []
-  ): MatchRange[] {
+  ): vscode.Range[] {
     const posOffset = posRange.start.character;
 
     /* NEGATIVE RANGES */
