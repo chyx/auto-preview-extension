@@ -125,7 +125,7 @@ async function openWikiLinkOnTheNextEditorColumn() {
       const editor = vscode.window.visibleTextEditors.find(
         (editor) => editor.viewColumn === nextColumn
       );
-      if (editor != undefined) {
+      if (editor !== undefined) {
         await openDocumentInEditor(editor.document, nextColumn, false);
       }
     }
