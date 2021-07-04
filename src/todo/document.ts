@@ -7,6 +7,9 @@ import Item from "./items/item";
 import Line from "./items/line";
 import Todo from "./items/todo";
 import TodoBox from "./items/todo_box";
+import TodoCancelled from "./items/todo_cancelled";
+import TodoDone from "./items/todo_done";
+import TodoFinished from "./items/todo_finished";
 // import {
 //   Line,
 //   Archive,
@@ -38,7 +41,7 @@ class Document {
   getItems(
     item:
       | typeof Line
-      //   | typeof TodoBox
+    | typeof TodoBox
       | typeof TodoFinished
       | typeof TodoDone
       | typeof TodoCancelled
