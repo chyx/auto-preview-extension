@@ -9,7 +9,7 @@ import DocumentModule from "../document";
 // import Project from "./project";
 // import Tag from "./tag";
 import TodoDone from "./todo_done";
-// import TodoCancelled from "./todo_cancelled";
+import TodoCancelled from "./todo_cancelled";
 
 /* DOCUMENTS LINES CACHE */
 
