@@ -113,7 +113,7 @@ class Line {
     negRanges?: vscode.Range | vscode.Range[] | RegExp | RegExp[]
   ): vscode.Range[] {
     return _.isEmpty(negRanges)
-      ? (item.range === null ? [item.range] : [])
+      ? (item.range === null ? [] : [item.range])
       : item.range === null
       ? []
       : this.getRangeDifference(item.text, item.range, negRanges);
