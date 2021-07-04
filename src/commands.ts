@@ -11,7 +11,7 @@ import Editor from "./utils/editor";
 interface CallTodosMethodOptions {
   checkValidity: boolean;
   filter: (arg: any) => boolean;
-  method: string;
+  method: (...args: any) => any;
   args: [];
   errors: {
     invalid: "Only todos can perform this action";
