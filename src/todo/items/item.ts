@@ -20,11 +20,7 @@ class Item {
     if (!_.isUndefined(this._line)) {
       return this._line;
     }
-    if (this.textDocument && this.matchRange) {
-        return this._line = this.textDocument.lineAt(this.lineNumber);
-    } else {
-        return null;
-    }
+    return this._line = ( this.textDocument && this.matchRange ? this.textDocument.lineAt ( this.lineNumber ) : null );
   }
 
   get lineNumber(): number {
