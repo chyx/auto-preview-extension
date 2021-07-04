@@ -45,7 +45,7 @@ class Editor {
 
       let index = 0;
 
-      changes
+      return changes
         .map((change) => {
           if (change.added) {
             return Editor.edits.makeInsert(change.value, lineNr, index);
