@@ -31,4 +31,4 @@ interface MatchRange {
 }
 
 /* EXPORT */
-export default {Regex, MatchRange};
+export {Regex, MatchRange};
