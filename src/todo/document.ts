@@ -11,12 +11,10 @@ import TodoFinished from "./items/todo_finished";
 
 /* DOCUMENT */
 class Document {
-  textEditor: vscode.TextEditor;
   textDocument: vscode.TextDocument;
   text?: string;
 
-  constructor(res: vscode.TextEditor, text?: string) {
-    this.textEditor = res as vscode.TextEditor; //TSC
+  constructor(res: vscode.TextDocument, text?: string) {
     this.textDocument = this.textEditor.document;
     this.text = text;
   }
