@@ -134,7 +134,7 @@ class Line {
   getDecorations(
     items: LineItem[],
     negRanges?: vscode.Range | vscode.Range[] | RegExp | RegExp[]
-  ): vscode.Range[] {type: TextEditorDecorationType, ranges: []} {
+  ): {type: TextEditorDecorationType, ranges: []} {
     let ranges = this.getItemsRanges(items, negRanges);
 
     return this.types.map((type, index) => ({
