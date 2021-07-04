@@ -50,7 +50,7 @@ class DocumentsLinesCache {
 /* DOCUMENT */
 class Document {
   /* UPDATE */
-  static update(res: vscode.TextEditor, force: boolean = false) {
+  static update(res: vscode.TextDocument, force: boolean = false) {
     const statisticsStatusbar =
         Config.getKey("statistics.statusbar.enabled") !== false,
       statisticsProjects =
