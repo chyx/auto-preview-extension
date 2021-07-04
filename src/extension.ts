@@ -219,10 +219,6 @@ function getCurrentWikiLink(
   }
 }
 
-const close_other_editor_command_id =
-  "workbench.action.closeEditorsInOtherGroups";
-const markdown_preview_command_id = "markdown.showPreviewToSide";
-
 // this method is called when your extension is deactivated
 export function deactivate() {}
 
