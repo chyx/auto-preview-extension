@@ -89,7 +89,7 @@ class Item {
   /* IS */
 
   static is(str: string, regex: RegExp) {
-    return Utils.regex.test(regex, str);
+    return Regex.test(regex, str);
   }
 }
 
