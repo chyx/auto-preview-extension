@@ -62,7 +62,7 @@ async function callTodosMethod(methodName: string) {
     return;
   }
 
-  const todosFiltered = todos.filter(options.filter);
+  const todosFiltered: Todo[] = todos.filter(options.filter);
 
   if (todosFiltered.length !== todos.length) {
     vscode.window.showErrorMessage(options.errors.filtered);
