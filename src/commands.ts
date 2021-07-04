@@ -7,8 +7,19 @@ import Editor from "./utils/editor";
 
 /* CALL TODOS METHOD */
 interface CallTodosMethodOptions {
+  checkValidity: boolean;
+  filter;
+  method;
+  args: [];
+  errors: {
+    invalid: "Only todos can perform this action",
+    filtered: "This todo cannot perform this action",
+  },
+}
+
+const DEFAULT: CallTodosMethodOptions = {
   checkValidity: false,
-  filter: (x: any) => boolean,
+  filter: (x: any) => true,
   method: undefined,
   args: [],
   errors: {
@@ -18,8 +29,9 @@ interface CallTodosMethodOptions {
 };
 
 async function callTodosMethod(inputOptions?) {
-  options: CallTodosMethodOptions = _.isString(inputOptions) ? { method: inputOptions } : inputOptions;
-  options = _.merge({}, callTodosMethodOptions, options);
+  const options = CallTodosMethodOptions();
+  // options: CallTodosMethodOptions = _.isString(inputOptions) ? { method: inputOptions } : inputOptions;
+  // options = _.merge({}, callTodosMethodOptions, options);
 
   const textEditor = vscode.window.activeTextEditor;
   if (!textEditor) {
