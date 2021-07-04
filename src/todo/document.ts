@@ -49,11 +49,6 @@ class Document {
   getItems(
     Item:
       | typeof Line
-      | typeof Archive
-      | typeof Comment
-      | typeof Formatted
-      | typeof Project
-      | typeof Tag
       | typeof Todo
       | typeof TodoBox
       | typeof TodoFinished
