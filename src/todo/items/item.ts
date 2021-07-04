@@ -9,7 +9,7 @@ class Item {
   textEditor: vscode.TextEditor;
   textDocument: vscode.TextDocument;
   match?: RegExpMatchArray;
-  _line?: vscode.TextLine | null;
+  _line?: vscode.TextLine;
   _pos: vscode.Position | undefined;
   _matchRange: MatchRange | null | undefined;
   _range: vscode.Range | null | undefined;
