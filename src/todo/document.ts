@@ -52,7 +52,7 @@ class Document {
     if (checkValidity && !item.is(line.text)) {
       return null;
     }
-    return new item(this.textEditor, line);
+    return new item(this.textDocument, line);
   }
 
   getLines() {
