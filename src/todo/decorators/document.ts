@@ -179,7 +179,7 @@ class Document {
     return _.concat(
       //   new Comment().getDecorations(items.comments),
       //   new Formatted().getDecorations(items.formatted),
-      //   new Tag().getDecorations(items.tags),
+        new Tag().getDecorations(items.tags),
       //   new Project().getDecorations(items.projects),
       new TodoDone().getDecorations(items.todosDone),
       new TodoCancelled().getDecorations(items.todosCancelled)
