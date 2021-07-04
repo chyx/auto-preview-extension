@@ -57,10 +57,10 @@ class Document {
     if (res === null) {
       return;
     }
-    const statisticsStatusbar =
-        Config.getKey("statistics.statusbar.enabled") !== false,
-      statisticsProjects =
-        Config.getKey("statistics.project.enabled") !== false;
+    // const statisticsStatusbar =
+    //     Config.getKey("statistics.statusbar.enabled") !== false,
+    //   statisticsProjects =
+    //     Config.getKey("statistics.project.enabled") !== false;
 
     if (res) {
       const doc = new DocumentModule(res);
