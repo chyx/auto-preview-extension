@@ -9,7 +9,7 @@ import Editor from "./utils/editor";
 interface CallTodosMethodOptions {
   checkValidity: boolean;
   filter: any;
-  method: any;
+  method: string;
   args: [];
   errors: {
     invalid: "Only todos can perform this action",
@@ -20,7 +20,7 @@ interface CallTodosMethodOptions {
 const DEFAULT: CallTodosMethodOptions = {
   checkValidity: false,
   filter: (x: any) => true,
-  method: string,
+  method: "'",
   args: [],
   errors: {
     invalid: "Only todos can perform this action",
