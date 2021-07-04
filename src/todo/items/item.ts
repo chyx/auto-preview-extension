@@ -69,7 +69,7 @@ class Item {
     if (!_.isUndefined(this._text)) {
       return this._text;
     }
-    return (this._text = this.match ? _.findLast(this.match, _.isString)
+    return (this._text === this.match ? _.findLast(this.match, _.isString)
       : this.line
       ? this.line.text
       : "");
