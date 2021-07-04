@@ -17,7 +17,7 @@
     "onCommand:autopreview.debug",
     "onLanguage:markdown"
   ],
-  "main": "./dist/extension.js",
+  "main": "./src/extension.js",
   "contributes": {
     "commands": [
       {
@@ -515,7 +515,6 @@
     "moment": "^2.29.1",
     "moment-precise-range-plugin": "^1.3.0",
     "string-matches": "^1.1.3",
-    "sugar-date": "^2.0.6",
     "to-time": "^1.0.2"
   }
 }
