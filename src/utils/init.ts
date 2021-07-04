@@ -8,7 +8,7 @@ class Init {
     const { commands } = vscode.extensions.getExtension("chyx111.autopreview")
       ?.packageJSON.contributes;
     if (commands) {
-      commands.forEach(({ command, title }) => {
+      commands.forEach(({ command, title }): void => {
         const _ = title;
         const commandName = _.last(command.split(".")) as string;
         const handler = MAP.get(commandName);
