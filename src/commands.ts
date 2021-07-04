@@ -28,7 +28,7 @@ const DEFAULT: CallTodosMethodOptions = {
   },
 };
 
-async function callTodosMethod(methodName) {
+async function callTodosMethod(methodName: string) {
   const options: CallTodosMethodOptions = {
     ...DEFAULT,
     ...{
