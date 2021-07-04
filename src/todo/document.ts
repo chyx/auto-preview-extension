@@ -22,7 +22,7 @@ import Todo from "./items/todo";
 /* DOCUMENT */
 
 class Document {
-  textEditor?: vscode.TextEditor;
+  textEditor: vscode.TextEditor;
   textDocument: vscode.TextDocument;
   text?: string;
 
