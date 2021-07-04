@@ -32,8 +32,8 @@
         "title": "Open current wiki link in the next tab."
       },
       {
-        "command": "",
-        "title": "Foam Todo: "
+        "command": "autopreview.toggleBox",
+        "title": "Foam Todo: Toggle ToDo Box"
       }
     ],
     "keybindings": [
