@@ -467,6 +467,11 @@
         "when": "editorTextFocus && !inDebugRepl"
       },
       {
+        "key": "shift+ctrl+c",
+        "command": "autopreview.toggleCancelled",
+        "when": "editorTextFocus && !inDebugRepl"
+      },
+      {
         "key": "ctrl+h",
         "command": "autopreview.openWikiLinkInPreviousTab",
         "when": "editorTextFocus && !inDebugRepl"
