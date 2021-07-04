@@ -26,8 +26,8 @@ class Regex {
 }
 
 class Range {
-  start: start;
-  end: end;
+  start: number;
+  end: number;
 }
 
 /* EXPORT */
