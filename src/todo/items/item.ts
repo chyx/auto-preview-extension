@@ -78,11 +78,11 @@ class Item {
   /* CONSTRUCTOR */
 
   constructor(
-    textEditor: vscode.TextEditor,
+    textDocument: vscode.TextDocument,
     line?: vscode.TextLine,
     match?: RegExpMatchArray
   ) {
-    this.textDocument = textEditor.document;
+    this.textDocument = textDocument;
     this._line = line;
     this.match = match;
   }
