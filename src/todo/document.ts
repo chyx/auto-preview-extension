@@ -56,7 +56,7 @@ class Document {
   }
 
   getItemAt<T extends Line | Todo>(
-    item: {new(...args: any): T, is(): boolean},
+    item: {new(...args: any): T, is(line: string): boolean},
     lineNumber: number,
     checkValidity = true
   ): T | null {
