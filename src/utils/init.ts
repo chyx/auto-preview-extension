@@ -17,7 +17,6 @@ class Init {
         }
       });
     }
-    return Commands;
   }
 }
 
