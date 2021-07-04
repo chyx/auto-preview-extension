@@ -462,7 +462,7 @@
         "when": "editorTextFocus && !inDebugRepl"
       },
       {
-        "key": "shift+ctrl+c",
+        "key": "shift+ctrl+a",
         "command": "autopreview.toggleBox",
         "when": "editorTextFocus && !inDebugRepl"
       },
