@@ -3,10 +3,8 @@
 import * as vscode from "vscode";
 
 import {
-  workspace,
   window,
   commands,
-  ExtensionContext,
   TextDocument,
   TextDocumentShowOptions,
 } from "vscode";
