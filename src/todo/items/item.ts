@@ -86,7 +86,6 @@ class Item {
     this.textDocument = textEditor.document;
     this._line = line;
     this.match = match;
-    this.matchRange = null;
   }
 
   /* IS */
