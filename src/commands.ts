@@ -69,7 +69,7 @@ async function callTodosMethod(options?) {
   //   return line.text.indexOf(Consts.symbols.tag);
   // });
 
-  await Utils.editor.edits.apply(textEditor, edits);
+  await Editor.edits.apply(textEditor, edits);
 
   // textEditor.selections = textEditor.selections.map((selection, index) => {
   //   // Putting the cursors before first new tag
