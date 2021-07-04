@@ -166,7 +166,7 @@ class Document {
     };
   }
 
-  static getItemsDecorations(items) {
+  static getItemsDecorations(items): {type: TextEditorDecorationType, ranges: vscode.Range[]}[] {
     return _.concat(
       //   new Comment().getDecorations(items.comments),
       //   new Formatted().getDecorations(items.formatted),
