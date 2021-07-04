@@ -107,7 +107,7 @@ class Document {
       return;
     }
 
-    const prevLines = DocumentsLinesCache.get(doc.textEditor);
+    const prevLines = DocumentsLinesCache.get(doc.textDocument);
 
     if (prevLines && prevLines.length === doc.textDocument.lineCount) {
       lineNrs = _.uniq(lineNrs); // Multiple cursors on the same line
