@@ -50,7 +50,7 @@ class DocumentsLinesCache {
 /* DOCUMENT */
 class Document {
   /* UPDATE */
-  static update(res: vscode.TextDocument = null, force: boolean = false) {
+  static update(res: vscode.TextDocument | null = null, force: boolean = false) {
     if (res === null) {
       res = vscode.window.activeTextEditor?.document;
     } 
