@@ -7,7 +7,7 @@ import LineItem from "../items/line";
 /* LINE */
 
 class Line {
-  types = [];
+  types: TextEditorDecorationType[] = [];
 
   /* RANGE */
   parseRanges(
