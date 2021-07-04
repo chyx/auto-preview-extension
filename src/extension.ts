@@ -123,7 +123,7 @@ async function openWikiLinkOnTheNextEditorColumn() {
       }
     } else {
       const editor = vscode.window.visibleTextEditors.find(
-        (editor) => editor.viewColumn == nextColumn
+        (editor) => editor.viewColumn === nextColumn
       );
       if (editor != undefined) {
         await openDocumentInEditor(editor.document, nextColumn, false);
