@@ -25,7 +25,7 @@ class Regex {
   }
 }
 
-class Range {
+interface Range {
   start: number;
   end: number;
 }
