@@ -42,7 +42,7 @@ async function callTodosMethod(methodName: (...args: any) => any) {
   if (!textEditor) {
     return;
   }
-  const doc = new Document(textEditor);
+  const doc = new Document(textEditor.document);
 
   const lines = _.uniq(
     _.flatten(
