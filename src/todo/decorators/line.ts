@@ -124,7 +124,7 @@ class Line {
     negRanges?: vscode.Range | vscode.Range[] | RegExp | RegExp[]
   ): vscode.Range[][] {
     const ranges = items.map((item) => this.getItemRanges(item, negRanges));
-      const zipped = _.zip(...(ranges as any));
+      const zipped = _.zip(...(ranges));
       const compact = zipped.map(_.compact);
       const concat = compact.map((r) => _.concat([], ...r));
 
