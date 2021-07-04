@@ -101,6 +101,11 @@ class Document {
     // 3. Same items but both ranging through the entire line
     // 4. Same items but both ranging through the entire line, with some other items before the end
 
+    res: vscode.TextDocument;
+    if (input instanceof vscode.TextDocument) {
+      res = input;
+    }
+
     const doc = new DocumentModule(res);
 
     if (!doc.isSupported()) {
