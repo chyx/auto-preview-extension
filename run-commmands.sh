@@ -8,7 +8,6 @@ npm install --save @types/lodash
 npm install --save @types/diff
 npm install --save @types/moment
 npm install --save @types/moment-precise-range-plugin
-npm install --save-dev @types/string-matches
 
 # Publish extensions.
 vsce package
