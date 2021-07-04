@@ -72,7 +72,7 @@ class Editor {
       return edit;
     }
 
-    static makeInsert(insertion: string, lineNr: number, charNr: number) {
+    static makeInsert(insertion: string, lineNr: number, charNr: number): vscode.TextEdit {
       const position = new vscode.Position(lineNr, charNr),
         edit = vscode.TextEdit.insert(position, insertion);
 
