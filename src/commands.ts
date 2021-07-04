@@ -113,11 +113,11 @@ function toggleBox() {
 }
 
 function toggleDone() {
-  return callTodosMethod("toggleDone");
+  return callTodosMethod(TodoBox.prototype.toggleDone);
 }
 
 function toggleCancelled() {
-  return callTodosMethod("toggleCancelled");
+  return callTodosMethod(TodoBox.prototype.toggleCancelled);
 }
 
 // function toggleStart() {
