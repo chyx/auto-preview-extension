@@ -121,7 +121,7 @@ class Document {
     return this.getItems(Todo, Consts.regexes.todo);
   }
 
-  getTodoAt(lineNumber: number, checkValidity?: boolean): Todo {
+  getTodoAt(lineNumber: number, checkValidity?: boolean): Todo | null {
     return this.getItemAt(Todo, lineNumber, checkValidity);
   }
 
