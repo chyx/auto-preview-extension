@@ -10,6 +10,7 @@ import DocumentModule from "../document";
 // import Tag from "./tag";
 import TodoDone from "./todo_done";
 import TodoCancelled from "./todo_cancelled";
+import { TextEditorDecorationType } from "vscode";
 
 /* DOCUMENTS LINES CACHE */
 
