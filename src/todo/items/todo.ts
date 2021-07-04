@@ -8,7 +8,6 @@ import Time from "../../utils/time";
 import Item from "./item";
 
 /* TODO */
-
 class Todo extends Item {
   /* GETTERS & SETTERS */
   _lineNextText: string | undefined;
