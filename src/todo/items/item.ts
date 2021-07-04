@@ -1,6 +1,6 @@
 import * as _ from "lodash";
 import * as vscode from "vscode";
-import {Regex, MatchRange} from "../../utils/regex";
+import { Regex, MatchRange } from "../../utils/regex";
 
 /* ITEM */
 
@@ -20,7 +20,10 @@ class Item {
     if (!_.isUndefined(this._line)) {
       return this._line;
     }
-    return this._line = ( this.textDocument && this.matchRange ? this.textDocument.lineAt ( this.lineNumber ) : null );
+    return (this._line =
+      this.textDocument && this.matchRange
+        ? this.textDocument.lineAt(this.lineNumber)
+        : null);
   }
 
   get lineNumber(): number {
@@ -29,7 +32,7 @@ class Item {
       return this._pos.line;
     }
     if (this.matchRange) {
-        this._pos = this.textDocument.positionAt(this.matchRange.start);
+      this._pos = this.textDocument.positionAt(this.matchRange.start);
     }
     return this._pos?.line || 0;
   }
@@ -66,10 +69,11 @@ class Item {
     if (!_.isUndefined(this._text)) {
       return this._text;
     }
-    return (this._text === this.match ? _.findLast(this.match, _.isString) as string
+    return this._text === this.match
+      ? (_.findLast(this.match, _.isString) as string)
       : this.line
       ? this.line.text
-      : "");
+      : "";
   }
 
   /* CONSTRUCTOR */
