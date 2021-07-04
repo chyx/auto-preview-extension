@@ -12,7 +12,7 @@ class Item {
   _line?: vscode.TextLine | null;
   _pos: vscode.Position | undefined;
   _matchRange: MatchRange | null | undefined;
-  _range: vscode.Range | undefined;
+  _range: vscode.Range | null | undefined;
   _text?: string;
 
   /* GETTERS */ // For performance reasons, trying to lazily evaluate as much as possible
