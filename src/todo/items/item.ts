@@ -9,14 +9,14 @@ class Item {
   textEditor: vscode.TextEditor;
   textDocument: vscode.TextDocument;
   match?: RegExpMatchArray;
-  _line;
+  _line: vscode.TextLine | null;
   _pos: vscode.Position | undefined;
   _matchRange: MatchRange | null | undefined;
   _range: vscode.Range | undefined;
   _text: string | undefined;
 
   /* GETTERS */ // For performance reasons, trying to lazily evaluate as much as possible
-  get line(): vscode.TextLine | undefined {
+  get line(): vscode.TextLine | null {
     if (!_.isUndefined(this._line)) {
       return this._line;
     }
