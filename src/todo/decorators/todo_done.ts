@@ -22,9 +22,7 @@ class TodoDone extends Line {
   TYPES = [TODO_DONE];
 
   getItemRanges ( todoDone: TodoDoneItem, negRange?: vscode.Range | vscode.Range[] ) {
-
     return [this.getRangeDifference ( todoDone.text, todoDone.range, negRange || [Consts.regexes.tag, Consts.regexes.formattedCode] )];
-
   }
 
 }
