@@ -457,7 +457,7 @@
         "when": "editorTextFocus && !inDebugRepl"
       },
       {
-        "key": "cmd+d",
+        "key": "shift+ctrl+d",
         "command": "autopreview.toggleDone",
         "when": "editorTextFocus && !inDebugRepl"
       },
