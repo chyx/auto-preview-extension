@@ -31,8 +31,8 @@ class Line {
               endLine: neg.end.line,
             };
           } else if (neg instanceof RegExp) {
-            const matches = stringMatches(text, neg),
-              ranges = Regex.matches2ranges(matches);
+            const matches = stringMatches(text, neg);
+const ranges = Regex.matches2ranges(matches);
 
             return ranges;
           }
