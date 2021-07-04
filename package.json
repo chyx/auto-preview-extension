@@ -36,6 +36,23 @@
         "title": "Foam Todo: Toggle ToDo Box"
       }
     ],
+    "configuration": {
+      "properties": {
+        "todo.tags.names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special tags' names",
+          "default": [
+            "critical",
+            "high",
+            "low",
+            "today"
+          ]
+        }
+      }
+    }
     "keybindings": [
       {
         "key": "ctrl+l",
