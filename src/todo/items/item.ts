@@ -69,7 +69,7 @@ class Item {
     if (!_.isUndefined(this._text)) {
       return this._text;
     }
-    return this._text === this.match
+    return this._text = this.match
       ? (_.findLast(this.match, _.isString) as string)
       : this.line
       ? this.line.text
