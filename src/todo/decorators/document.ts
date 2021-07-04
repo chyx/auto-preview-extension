@@ -24,15 +24,15 @@ class DocumentsLinesCache {
     return lines && _.isNumber(lineNr) ? [lines[lineNr]] : lines;
   }
 
-  static update(textEditor: vscode.TextEditor): void {
-    const id = textEditor.document.uri.path;
-    DocumentsLinesCache.lines[id] = textEditor.document.getText().split("\n");
+  static update(textEditor: vscode.TextDocument): void {
+    const id = textEditor.uri.path;
+    DocumentsLinesCache.lines[id] = textEditor.getText().split("\n");
   }
 
   static didChange(doc: DocumentModule) {
     // Check if the document actually changed
 
-    const prevLines = DocumentsLinesCache.get(doc.textEditor);
+    const prevLines = DocumentsLinesCache.get(doc.textDocument);
 
     if (prevLines) {
       const prevText = prevLines.join("\n"),
