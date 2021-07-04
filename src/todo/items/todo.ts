@@ -1,7 +1,6 @@
 import * as _ from "lodash";
 import * as moment from "moment";
 import * as vscode from "vscode";
-import Config from "../../config";
 import Consts from "../../consts";
 import Editor from "../../utils/editor";
 import Time from "../../utils/time";
