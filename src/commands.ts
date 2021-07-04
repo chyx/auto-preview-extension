@@ -20,6 +20,9 @@ async function callTodosMethod(options?) {
   options = _.merge({}, callTodosMethodOptions, options);
 
   const textEditor = vscode.window.activeTextEditor;
+  if (!textEditor) {
+    return;
+  }
   const doc = new Document(textEditor);
 
   const lines = _.uniq(
