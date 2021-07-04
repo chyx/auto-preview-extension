@@ -93,9 +93,9 @@ class Document {
   //     return this.getItemAt(Project, lineNumber, checkValidity);
   //   }
 
-  //   getTags() {
-  //     return this.getItems(Tag, Consts.regexes.tagSpecialNormal);
-  //   }
+  getTags() {
+    return this.getItems(Tag, Consts.regexes.tagSpecialNormal);
+  }
 
   getTodos() {
     return this.getItems(Todo, Consts.regexes.todo);
