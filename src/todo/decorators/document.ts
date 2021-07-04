@@ -14,7 +14,7 @@ import TodoCancelled from "./todo_cancelled";
 /* DOCUMENTS LINES CACHE */
 
 class DocumentsLinesCache {
-  static lines: {[name: string]: string[]} = {};
+  static lines: { [name: string]: string[] } = {};
 
   static get(textEditor: vscode.TextEditor, lineNr?: number): string[] {
     const id = textEditor.document.uri.path;
@@ -49,10 +49,7 @@ class DocumentsLinesCache {
 /* DOCUMENT */
 class Document {
   /* UPDATE */
-  static update(
-    res: vscode.TextEditor,
-    force: boolean = false
-  ) {
+  static update(res: vscode.TextEditor, force: boolean = false) {
     const statisticsStatusbar =
         Config.getKey("statistics.statusbar.enabled") !== false,
       statisticsProjects =
@@ -166,7 +163,9 @@ class Document {
     };
   }
 
-  static getItemsDecorations(items: any): {type: TextEditorDecorationType, ranges: vscode.Range[]}[] {
+  static getItemsDecorations(
+    items: any
+  ): { type: TextEditorDecorationType; ranges: vscode.Range[] }[] {
     return _.concat(
       //   new Comment().getDecorations(items.comments),
       //   new Formatted().getDecorations(items.formatted),
