@@ -17,8 +17,8 @@ const callTodosMethodOptions = {
   },
 };
 
-async function callTodosMethod(options?) {
-  options = _.isString(options) ? { method: options } : options;
+async function callTodosMethod(inputOptions?) {
+  options = _.isString(inputOptions) ? { method: inputOptions } : inputOptions;
   options = _.merge({}, callTodosMethodOptions, options);
 
   const textEditor = vscode.window.activeTextEditor;
