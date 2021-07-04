@@ -127,7 +127,7 @@ class Document {
     return this.getItems(TodoBox, Consts.regexes.todoBox);
   }
 
-  getTodoBoxAt(lineNumber: number, checkValidity?) {
+  getTodoBoxAt(lineNumber: number, checkValidity?: boolean) {
     return this.getItemAt(TodoBox, lineNumber, checkValidity);
   }
 
