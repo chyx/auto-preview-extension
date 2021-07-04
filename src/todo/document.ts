@@ -2,6 +2,7 @@ import * as _ from "lodash";
 import stringMatches from "string-matches";
 import * as vscode from "vscode";
 import Consts from "../consts";
+import Item from "./items/item";
 // import Utils from "../utils";
 import Line from "./items/line";
 import Todo from "./items/todo";
@@ -69,11 +70,11 @@ class Document {
       | typeof Todo,
     lineNumber: number,
     checkValidity = true
-  ): Item {
+  ): Item | null {
     const line = this.textDocument.lineAt(lineNumber);
 
     if (checkValidity && !item.is(line.text)) {
-      return;
+      return null;
     }
     return new item(this.textEditor, line);
   }
