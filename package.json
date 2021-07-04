@@ -4,7 +4,7 @@
   "publisher": "chyx111",
   "repository": "git@github.com:chyx/auto-preview-extension.git",
   "description": "",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -17,7 +17,7 @@
     "onCommand:autopreview.debug",
     "onLanguage:markdown"
   ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
