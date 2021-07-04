@@ -92,7 +92,8 @@ class Consts {
         tagSpecialNormal: new RegExp(
           `(?:^|[^a-zA-Z0-9])(?:${tagsNames
             .map(
-              (n: string) => `(@${_.escapeRegExp(n)}(?:(?:\\([^)]*\\))|(?![a-zA-Z])))`
+              (n: string) =>
+                `(@${_.escapeRegExp(n)}(?:(?:\\([^)]*\\))|(?![a-zA-Z])))`
             )
             .join(
               "|"
