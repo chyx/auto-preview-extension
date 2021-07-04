@@ -6,7 +6,7 @@ import { MAP } from "../commands";
 class Init {
   static commands(context: vscode.ExtensionContext) {
     const { commands } = vscode.extensions.getExtension("chyx111.autopreview")
-      ?.packageJSON.contributes;
+      ?.packageJSON.contributes as Command[];
     if (commands) {
       commands.forEach(({ command, title }) => {
         const _ = title;
