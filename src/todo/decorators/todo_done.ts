@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import { TextEditorDecorationType } from "vscode";
 import Consts from "../../consts";
 import TodoDoneItem from "../items/todo_done";
 import Line from "./line";
@@ -23,14 +24,14 @@ class TodoDone extends Line {
   getItemRanges(
     todoDone: TodoDoneItem,
     negRange?: vscode.Range | vscode.Range[]
-  ): { type: TextEditorDecorationType; ranges: vscode.Range[] }[] {
+  ): Range[] {
     return todoDone.range === null
       ? []
-      : this.getRangeDifference(
+      : [this.getRangeDifference(
           todoDone.text,
           todoDone.range,
           negRange || [Consts.regexes.tag, Consts.regexes.formattedCode]
-        );
+        )];
   }
 }
 
