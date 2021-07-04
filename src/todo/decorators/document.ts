@@ -92,7 +92,7 @@ class Document {
     }
   }
 
-  static updateLines(input: vscode.TextEditor | vscode.TextDocument, lineNrs: number[]) {
+  static updateLines(input: vscode.TextEditor, lineNrs: number[]) {
     //URL: https://github.com/Microsoft/vscode/issues/50346
 
     // This should optimize these scenarios:
