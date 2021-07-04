@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import * as _ from 'lodash';
-import * as Commands from '../commands';
+import Commands from '../commands';
 
 /* INIT */
 const Init = {
