@@ -55,7 +55,7 @@ class Document {
     });
   }
 
-  getItemAt(
+  getItemAt<T>(
     item:
       | typeof Line
       //   | typeof Archive
