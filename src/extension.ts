@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import ChangesDecorator from './todo/decorators/changes';
+import DocumentDecorator from './todo/decorators/document';
 
 import {
   window,
