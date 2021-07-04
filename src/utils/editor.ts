@@ -32,7 +32,6 @@ class Editor {
     }
 
     /* MAKE */
-
     static makeDiff(before: string, after: string, lineNr: number = 0) {
       if (before === after) {return;}
 
