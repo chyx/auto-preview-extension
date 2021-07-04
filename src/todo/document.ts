@@ -15,9 +15,10 @@ class Document {
   textDocument: vscode.TextDocument;
   text?: string;
 
-  constructor(res: vscode.TextEditor) {
+  constructor(res: vscode.TextEditor, text?: string) {
     this.textEditor = res as vscode.TextEditor; //TSC
     this.textDocument = this.textEditor.document;
+    this.text = text;
   }
 
   /* GET */
