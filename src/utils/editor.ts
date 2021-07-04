@@ -54,7 +54,7 @@ class Editor {
             index += change.value.length;
             return null;
           }
-        }).filter((x) => x !== null);
+        }).filter((x): x is vscode.TextEdit => x !== null);
         return edits;
     }
 
