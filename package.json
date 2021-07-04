@@ -112,7 +112,7 @@
         "todo.symbols.box": {
           "type": "string",
           "description": "Todo box string",
-          "default": "☐"
+          "default": "[ ]"
         },
         "todo.symbols.done": {
           "type": "string",
