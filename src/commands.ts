@@ -2,6 +2,7 @@ import * as _ from "lodash";
 import * as path from "path";
 import * as vscode from "vscode";
 import Document from "./todo/document";
+import Todo from "./todo/items/todo";
 import Editor from "./utils/editor";
 
 /* CALL TODOS METHOD */
@@ -105,7 +106,7 @@ function toggleCancelled() {
 function toggleStart() {
   return callTodosMethod({
     checkValidity: true,
-    filter: (todo) => todo.isBox(),
+    filter: (todo: Todo) => todo.isBox(),
     method: "toggleStart",
     errors: {
       invalid: "Only todos can be started",
