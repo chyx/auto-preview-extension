@@ -4,6 +4,7 @@ import * as vscode from "vscode";
 import { TextEdit } from "vscode";
 import Document from "./todo/document";
 import Todo from "./todo/items/todo";
+import TodoBox from "./todo/items/todo_box";
 import Editor from "./utils/editor";
 
 /* CALL TODOS METHOD */
@@ -108,7 +109,7 @@ async function callTodosMethod(methodName: string) {
 }
 
 function toggleBox() {
-  return callTodosMethod("toggleBox");
+  return callTodosMethod(TodoBox.prototype.toggleBox);
 }
 
 function toggleDone() {
