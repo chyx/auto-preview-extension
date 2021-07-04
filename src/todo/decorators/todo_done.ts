@@ -26,13 +26,13 @@ class TodoDone extends Line {
   ): {type: TextEditorDecorationType, ranges: vscode.Range[]}[] {
     return todoDone.range === null
       ? []
-      : [
+      : 
           this.getRangeDifference(
             todoDone.text,
             todoDone.range,
             negRange || [Consts.regexes.tag, Consts.regexes.formattedCode]
-          ),
-        ];
+          )
+        ;
   }
 }
 
