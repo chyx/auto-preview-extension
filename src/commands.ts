@@ -73,7 +73,7 @@ async function callTodosMethod(methodName: string) {
 
   todosFiltered.map((todo) => todo[options.method](...options.args));
 
-  const edits = _.filter(
+  const edits: TextEdit[] = _.filter(
     _.flattenDeep(todosFiltered.map((todo: Todo) => todo["makeEdit"]()))
   );
 
