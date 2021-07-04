@@ -8,8 +8,8 @@ import Editor from "./utils/editor";
 /* CALL TODOS METHOD */
 interface CallTodosMethodOptions {
   checkValidity: boolean;
-  filter;
-  method;
+  filter: any;
+  method: any;
   args: [];
   errors: {
     invalid: "Only todos can perform this action",
