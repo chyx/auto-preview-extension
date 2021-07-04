@@ -84,7 +84,7 @@ class Document {
   ) {
     const line = this.textDocument.lineAt(lineNumber);
 
-    if (checkValidity && !item.is(line.text)) return;
+    if (checkValidity && !item.is(line.text)) {return;}
 
     return new item(this.textEditor, line);
   }
