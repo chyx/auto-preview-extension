@@ -66,7 +66,7 @@ class Item {
     }
   }
 
-  get text() {
+  get text(): sring{
     if (!_.isUndefined(this._text)) {
       return this._text;
     }
