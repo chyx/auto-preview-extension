@@ -22,7 +22,7 @@ interface CallTodosMethodOptions {
 const DEFAULT: CallTodosMethodOptions = {
   checkValidity: false,
   filter: (x: any) => true,
-  method: () => (),
+  method: () => true,
   args: [],
   errors: {
     invalid: "Only todos can perform this action",
