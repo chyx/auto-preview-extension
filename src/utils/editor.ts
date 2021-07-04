@@ -1,6 +1,7 @@
 import * as _ from "lodash";
 import * as diff from "diff";
 import * as vscode from "vscode";
+import Consts from "../consts";
 
 /* EDITOR */
 
