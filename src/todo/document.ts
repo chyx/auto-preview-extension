@@ -38,7 +38,7 @@ class Document {
       matches = stringMatches(matchText, regex);
 
     return matches.map((match) => {
-      return new item(this.textEditor, undefined, match);
+      return new item(this.textDocument, undefined, match);
     });
   }
 
