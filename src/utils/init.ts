@@ -20,7 +20,7 @@ const Init = {
     return Commands;
   },
 
-}
+};
 
 
 /* EXPORT */

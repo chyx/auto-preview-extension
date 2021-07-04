@@ -84,7 +84,7 @@ async function openWikiLinkOnTheNextEditorColumn() {
 	const column = window.activeTextEditor?.viewColumn;
 	if (!column) {
 		window.showInformationMessage('Current editor not found.');
-		return
+		return;
 	}
 	const nextColumn = column + 1;
 	const document = window.activeTextEditor?.document;
@@ -98,7 +98,7 @@ async function openWikiLinkOnTheNextEditorColumn() {
 				vscode.commands.executeCommand('workbench.action.closeOtherEditors');
 			}
 		} else {
-			const editor = vscode.window.visibleTextEditors.find(editor => editor.viewColumn == nextColumn)
+			const editor = vscode.window.visibleTextEditors.find(editor => editor.viewColumn == nextColumn);
 			if (editor != undefined) {
 				await openDocumentInEditor(editor.document, nextColumn, false);
 			}
@@ -110,7 +110,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 	const column = window.activeTextEditor?.viewColumn;
 	if (!column) {
 		window.showInformationMessage('Current editor not found.');
-		return
+		return;
 	}
 	const previousColumn = vscode.ViewColumn.One == column ? vscode.ViewColumn.One : column - 1;
 	const document = window.activeTextEditor?.document;
@@ -123,7 +123,7 @@ async function openWikiLinkOnThePreviousEditorColumn() {
 				await openInPreviewEditor(notes[0].fsPath, previousColumn, false);
 			}
 		} else {
-			const editor = vscode.window.visibleTextEditors.find(editor => editor.viewColumn == previousColumn)
+			const editor = vscode.window.visibleTextEditors.find(editor => editor.viewColumn == previousColumn);
 			if (editor != undefined) {
 				await openDocumentInEditor(editor.document, previousColumn, false);
 			}
