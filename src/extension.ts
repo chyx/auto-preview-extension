@@ -51,7 +51,7 @@ export function activate(context: vscode.ExtensionContext) {
   Init.commands(context);
   context.subscriptions.push(
     vscode.workspace.onDidChangeTextDocument ( ChangesDecorator.onChanges ),
-    vscode.window.onDidChangeActiveTextEditor ( () => DocumentDecorator.update () )
+    vscode.window.onDidChangeActiveTextEditor ( () => DocumentDecorator.update() )
   );
 
   let alreadyOpenedFirstMarkdown = false;
