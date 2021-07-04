@@ -9,7 +9,7 @@ import Editor from "./utils/editor";
 /* CALL TODOS METHOD */
 interface CallTodosMethodOptions {
   checkValidity: boolean;
-  filter: any;
+  filter: (any) => boolean;
   method: string;
   args: [];
   errors: {
