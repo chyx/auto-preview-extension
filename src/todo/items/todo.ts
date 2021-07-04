@@ -25,13 +25,15 @@ class Todo extends Item {
   }
 
   /* EDIT */
-  makeEdit():  {
+  makeEdit(): vscode.TextEdit[] {
     if (this.line) {
       return Editor.edits.makeDiff(
         this.line.text,
         this.lineNextText,
         this.line.lineNumber
       );
+    } else {
+      return [];
     }
   }
 
