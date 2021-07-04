@@ -18,26 +18,26 @@ class Line {
     let negRanges = _.flatten(_.castArray(rangesRaw as any)); //TSC
 
     return _.flatten(
-        negRanges.map((neg) => {
-          if (!neg) {
-            return;
-          }
+      negRanges.map((neg) => {
+        if (!neg) {
+          return;
+        }
 
-          if (neg instanceof vscode.Range) {
-            return {
-              start: neg.start.character,
-              startLine: neg.start.line,
-              end: neg.end.character,
-              endLine: neg.end.line,
-            };
-          } else if (neg instanceof RegExp) {
-            const matches = stringMatches(text, neg);
-const ranges = Regex.matches2ranges(matches);
+        if (neg instanceof vscode.Range) {
+          return {
+            start: neg.start.character,
+            startLine: neg.start.line,
+            end: neg.end.character,
+            endLine: neg.end.line,
+          };
+        } else if (neg instanceof RegExp) {
+          const matches = stringMatches(text, neg);
+          const ranges = Regex.matches2ranges(matches);
 
-            return ranges;
-          }
-        })
-      ).filter((x): x is MatchRange => x !== null);
+          return ranges;
+        }
+      })
+    ).filter((x): x is MatchRange => x !== null);
   }
 
   getRangeDifference(
@@ -113,7 +113,9 @@ const ranges = Regex.matches2ranges(matches);
     negRanges?: vscode.Range | vscode.Range[] | RegExp | RegExp[]
   ): vscode.Range[] {
     return _.isEmpty(negRanges)
-      ? (item.range === null ? [] : [item.range])
+      ? item.range === null
+        ? []
+        : [item.range]
       : item.range === null
       ? []
       : this.getRangeDifference(item.text, item.range, negRanges);
@@ -124,9 +126,9 @@ const ranges = Regex.matches2ranges(matches);
     negRanges?: vscode.Range | vscode.Range[] | RegExp | RegExp[]
   ): vscode.Range[][] {
     const ranges = items.map((item) => this.getItemRanges(item, negRanges));
-      const zipped = _.zip(...(ranges));
-      const compact = zipped.map(_.compact);
-      const concat = compact.map((r) => _.concat([], ...r));
+    const zipped = _.zip(...ranges);
+    const compact = zipped.map(_.compact);
+    const concat = compact.map((r) => _.concat([], ...r));
 
     return concat;
   }
@@ -134,7 +136,7 @@ const ranges = Regex.matches2ranges(matches);
   getDecorations(
     items: LineItem[],
     negRanges?: vscode.Range | vscode.Range[] | RegExp | RegExp[]
-  ): {type: TextEditorDecorationType, ranges: vscode.Range[]}[] {
+  ): { type: TextEditorDecorationType; ranges: vscode.Range[] }[] {
     let ranges = this.getItemsRanges(items, negRanges);
 
     return this.types.map((type, index) => ({
