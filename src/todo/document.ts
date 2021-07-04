@@ -11,6 +11,7 @@ import TodoFinished from "./items/todo_finished";
 
 /* DOCUMENT */
 class Document {
+  textEditor?: vscode.TextEditor;
   textDocument: vscode.TextDocument;
   text?: string;
 
