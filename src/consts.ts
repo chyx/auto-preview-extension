@@ -7,8 +7,8 @@ import Config from "./config";
 class Consts {
   static get() {
     const config = Config.get();
-const archiveName = _.get(config, "archive.name") || "Archive";
-const tagsNames = _.get(config, "tags.names");
+    const archiveName = _.get(config, "archive.name") || "Archive";
+    const tagsNames = _.get(config, "tags.names");
 
     function getColors(root: string) {
       return {
