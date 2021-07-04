@@ -67,7 +67,7 @@ class Document {
   }
 
   getItemAt(
-    Item:
+    item:
       | typeof Line
     //   | typeof Archive
     //   | typeof Comment
@@ -84,9 +84,9 @@ class Document {
   ) {
     const line = this.textDocument.lineAt(lineNumber);
 
-    if (checkValidity && !Item.is(line.text)) return;
+    if (checkValidity && !item.is(line.text)) return;
 
-    return new Item(this.textEditor, line);
+    return new item(this.textEditor, line);
   }
 
   getLines() {
