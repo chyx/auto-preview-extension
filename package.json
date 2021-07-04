@@ -12,6 +12,7 @@
     "Other"
   ],
   "activationEvents": [
+    "*",
     "onCommand:autopreview.helloWorld",
     "onCommand:autopreview.debug",
     "onLanguage:markdown"
