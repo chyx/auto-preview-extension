@@ -167,7 +167,7 @@ class Document {
       //   comments: doc.getComments(),
       //   formatted: Config.getKey("formatting.enabled") ? doc.getFormatted() : [],
       //   projects: doc.getProjects(),
-      //   tags: doc.getTags(),
+      tags: doc.getTags(),
       todosBox: doc.getTodosBox(),
       todosDone: doc.getTodosDone(),
       todosCancelled: doc.getTodosCancelled(),
