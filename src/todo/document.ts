@@ -18,7 +18,9 @@ class Document {
   constructor(res: vscode.TextDocument, text?: string) {
     this.textDocument = res;
     this.text = text;
-    this.textEditor = vscode.window.visibleTextEditors.find ( te => te.document === res ) || vscode.window.activeTextEditor;
+    this.textEditor =
+      vscode.window.visibleTextEditors.find((te) => te.document === res) ||
+      vscode.window.activeTextEditor;
   }
 
   /* GET */
