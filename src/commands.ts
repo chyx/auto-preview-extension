@@ -1,6 +1,7 @@
 import * as _ from "lodash";
 import * as path from "path";
 import * as vscode from "vscode";
+import Document from "./todo/document";
 
 /* CALL TODOS METHOD */
 const callTodosMethodOptions = {
