@@ -21,7 +21,6 @@ class Document {
   }
 
   /* GET */
-
   getItems(
     item:
       | typeof Line
