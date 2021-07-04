@@ -1,6 +1,7 @@
 import * as _ from "lodash";
 import * as path from "path";
 import * as vscode from "vscode";
+import { TextEdit } from "vscode";
 import Document from "./todo/document";
 import Todo from "./todo/items/todo";
 import Editor from "./utils/editor";
