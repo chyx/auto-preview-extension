@@ -6,6 +6,7 @@ npm install --save to-time
 npm install --save @types/lodash
 npm install --save @types/diff
 npm install --save @types/moment
+npm install --save @types/moment-precise-range-plugin
 
 # Publish extensions.
 vsce package
