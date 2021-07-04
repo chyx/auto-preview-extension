@@ -16,7 +16,7 @@ class Item {
   _text: string | undefined;
 
   /* GETTERS */ // For performance reasons, trying to lazily evaluate as much as possible
-  get line(): vscode.TextLine {
+  get line(): vscode.TextLine | undefined {
     if (!_.isUndefined(this._line)) {
       return this._line;
     }
