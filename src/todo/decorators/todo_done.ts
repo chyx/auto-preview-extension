@@ -4,7 +4,6 @@ import TodoDoneItem from '../items/todo_done';
 import Line from './line';
 
 /* DECORATION TYPES */
-
 const TODO_DONE = vscode.window.createTextEditorDecorationType ({
   color: Consts.colors.done,
   rangeBehavior: vscode.DecorationRangeBehavior.ClosedOpen,
