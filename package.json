@@ -56,49 +56,6 @@
           "description": "New todo files default content",
           "default": "\nTodo:\n  ☐ Item\n"
         },
-        "todo.file.include": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Globs to use for including files",
-          "default": [
-            "**/TODO",
-            "**/TODOS",
-            "**/*.TODO",
-            "**/*.TODOS",
-            "**/*.todo",
-            "**/*.todos",
-            "**/*.task",
-            "**/*.tasks",
-            "**/*.taskpaper",
-            "**/todolist.txt"
-          ]
-        },
-        "todo.file.exclude": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Globs to use for excluding files",
-          "default": [
-            "**/.!(todo|todos|task|tasks)/**",
-            "**/_output/**",
-            "**/bower_components/**",
-            "**/build/**",
-            "**/dist/**",
-            "**/venv/**",
-            "**/node_modules/**",
-            "**/out/**",
-            "**/output/**",
-            "**/release/**",
-            "**/releases/**",
-            "**/static/**",
-            "**/target/**",
-            "**/third_party/**",
-            "**/vendor/**"
-          ]
-        },
         "todo.file.view.expanded": {
           "type": "boolean",
           "description": "Start the tree in an expanded state",
