@@ -25,7 +25,7 @@ class Todo extends Item {
   }
 
   /* EDIT */
-  makeEdit() {
+  makeEdit():  {
     if (this.line) {
       return Editor.edits.makeDiff(
         this.line.text,
