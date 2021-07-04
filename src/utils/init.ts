@@ -7,6 +7,7 @@ class Init {
   static commands(context: vscode.ExtensionContext) {
     const { commands } = vscode.extensions.getExtension("chyx111.autopreview")
       ?.packageJSON.contributes;
+    if (commands) {
     commands.forEach(({ command, title }) => {
       const commandName = _.last(command.split(".")) as string;
       const handler = MAP.get(commandName);
@@ -15,6 +16,8 @@ class Init {
         context.subscriptions.push(disposable);
       }
     });
+
+    }
     return Commands;
   }
 };
