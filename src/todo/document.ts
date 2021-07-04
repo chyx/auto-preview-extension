@@ -3,19 +3,19 @@ import stringMatches from "string-matches";
 import * as vscode from "vscode";
 import Consts from "../consts";
 import Utils from "../utils";
-import {
-  Line,
-  Archive,
-  Comment,
-  Formatted,
-  Project,
-  Tag,
-  Todo,
-  TodoBox,
-  TodoFinished,
-  TodoDone,
-  TodoCancelled,
-} from "./items";
+// import {
+//   Line,
+//   Archive,
+//   Comment,
+//   Formatted,
+//   Project,
+//   Tag,
+//   Todo,
+//   TodoBox,
+//   TodoFinished,
+//   TodoDone,
+//   TodoCancelled,
+// } from "./items";
 
 /* DOCUMENT */
 
