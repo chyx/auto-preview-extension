@@ -10,7 +10,7 @@ class Init {
     commands.forEach(({ command, title }) => {
       const commandName = _.last(command.split(".")) as string;
       const handler = MAP.get(commandName);
-      if (handler) {
+      if (handler !== undefined) {
         const disposable = vscode.commands.registerCommand(command, handler);
         context.subscriptions.push(disposable);
       }
