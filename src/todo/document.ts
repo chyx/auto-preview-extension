@@ -1,8 +1,8 @@
 import * as _ from "lodash";
-import stringMatches from "string-matches";
+// import stringMatches from "string-matches";
 import * as vscode from "vscode";
 import Consts from "../consts";
-import Utils from "../utils";
+// import Utils from "../utils";
 import Line from "./items/line";
 import Todo from "./items/todo";
 import TodoBox from "./items/todo_box";
