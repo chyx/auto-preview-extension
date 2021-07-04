@@ -9,7 +9,7 @@ const Init = {
       ?.packageJSON.contributes;
     commands.forEach(({ command, title }) => {
       const commandName = _.last(command.split(".")) as string;
-      const handler = Commands.get(commandName);
+      const handler = MAP.get(commandName);
       const disposable = vscode.commands.registerCommand(command, handler);
 
       context.subscriptions.push(disposable);
