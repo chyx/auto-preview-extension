@@ -11,8 +11,8 @@ class Init {
       commands.forEach(({ command, title }) => {
         const commandName = _.last(command.split(".")) as string;
         const handler = MAP.get(commandName);
-        console.log('Registing: ' + commandName);
         if (handler !== undefined) {
+          console.log('Registing: ' + commandName);
           const disposable = vscode.commands.registerCommand(command, handler);
           context.subscriptions.push(disposable);
         }
