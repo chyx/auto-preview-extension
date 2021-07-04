@@ -17,7 +17,6 @@ const TODO_DONE = vscode.window.createTextEditorDecorationType({
 });
 
 /* TODO DONE */
-
 class TodoDone extends Line {
   types = [TODO_DONE];
 
