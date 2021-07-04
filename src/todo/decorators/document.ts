@@ -76,7 +76,7 @@ class Document {
         const decorations = Document.getItemsDecorations(items);
 
         decorations.forEach(({ type, ranges }) => {
-          doc.textEditor.setDecorations(type, ranges);
+          doc.textDocument.setDecorations(type, ranges);
         });
 
         // const StatusbarTimer = require("../../statusbars/timer").default; // Avoiding a cyclic dependency
