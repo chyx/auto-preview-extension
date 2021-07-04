@@ -46,7 +46,7 @@ class Item {
       : null);
   }
 
-  get range(): vscode.Range {
+  get range(): vscode.Range | null {
     if (!_.isUndefined(this._range)) {
       return this._range;
     }
