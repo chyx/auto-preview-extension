@@ -40,7 +40,7 @@ class Item {
       return this._matchRange;
     }
     return (this._matchRange = this.match
-      ? Utils.regex.match2range(this.match)
+      ? Regex.match2range(this.match)
       : null);
   }
 
