@@ -31,7 +31,7 @@ class Item {
     if (!_.isUndefined(this._pos)) {
       return this._pos.line;
     }
-    this._pos = this.textDocument.positionAt(this.matchRange.start);
+    this._pos = this.textDocument.positionAt(this.matchRange?.start);
     return this._pos.line;
   }
 
