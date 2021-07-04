@@ -5,6 +5,7 @@ import Consts from "../consts";
 import Utils from "../utils";
 import Line from "./items/line";
 import Todo from "./items/todo";
+import TodoBox from "./items/todo_box";
 // import {
 //   Line,
 //   Archive,
