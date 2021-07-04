@@ -229,9 +229,9 @@ class Todo extends Item {
     const firstChar = this.lineNextText.match(/\S/);
     const startIndex: number = match
       ? match[0].indexOf(match[1])
-      : (firstChar
-      ? firstChar.index as number
-      : this.lineNextText.length);
+      : firstChar
+      ? (firstChar.index as number)
+      : this.lineNextText.length;
     const endIndex: number = match ? match[0].length : startIndex;
 
     this.lineNextText = `${this.lineNextText.substring(0, startIndex)}${
