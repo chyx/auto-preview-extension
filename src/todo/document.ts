@@ -41,7 +41,7 @@ class Document {
   getItems(
     item:
       | typeof Line
-    | typeof TodoBox
+      | typeof TodoBox
       | typeof TodoFinished
       | typeof TodoDone
       | typeof TodoCancelled
