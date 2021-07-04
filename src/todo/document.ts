@@ -69,7 +69,7 @@ class Document {
       | typeof Todo,
     lineNumber: number,
     checkValidity = true
-  ) {
+  ): Item {
     const line = this.textDocument.lineAt(lineNumber);
 
     if (checkValidity && !item.is(line.text)) {
