@@ -53,6 +53,7 @@ class Editor {
             return edit;
           } else {
             index += change.value.length;
+            return null;
           }
         })
       );
