@@ -1,4 +1,5 @@
 import * as _ from "lodash";
+import { EndOfLine } from "vscode";
 
 /* REGEX */
 
@@ -22,6 +23,11 @@ class Regex {
 
     return { start, end };
   }
+}
+
+class Range {
+  start: start;
+  end: end;
 }
 
 /* EXPORT */
