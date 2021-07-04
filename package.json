@@ -353,7 +353,7 @@
         "todo.timekeeping.created.format": {
           "type": "string",
           "description": "Format used for displaying time inside @created",
-          "default": "YY-MM-DD HH:mm"
+          "default": "YYYY-MM-DD HH:mm"
         },
         "todo.timekeeping.started.time": {
           "type": "boolean",
@@ -363,7 +363,7 @@
         "todo.timekeeping.started.format": {
           "type": "string",
           "description": "Format used for displaying time inside @started",
-          "default": "YY-MM-DD HH:mm"
+          "default": "YYYY-MM-DD HH:mm"
         },
         "todo.timekeeping.finished.enabled": {
           "type": "boolean",
@@ -378,7 +378,7 @@
         "todo.timekeeping.finished.format": {
           "type": "string",
           "description": "Format used for displaying time inside @done/cancelled",
-          "default": "YY-MM-DD HH:mm"
+          "default": "YYYY-MM-DD HH:mm"
         },
         "todo.timekeeping.elapsed.enabled": {
           "type": "boolean",
