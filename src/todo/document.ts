@@ -58,7 +58,12 @@ class Document {
     });
   }
 
-  getItemAt<T extends Line | Todo>(
+  getItemAt<T extends Line
+      | TodoBox
+      | TodoFinished
+      | TodoDone
+      | TodoCancelled
+  | Todo>(
     item: { new (...args: any): T; is(line: string): boolean },
     lineNumber: number,
     checkValidity = true
