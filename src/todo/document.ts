@@ -55,19 +55,8 @@ class Document {
     });
   }
 
-  getItemAt<T>(
-    item:
-      | typeof Line
-      //   | typeof Archive
-      //   | typeof Comment
-      //   | typeof Formatted
-      //   | typeof Project
-      //   | typeof Tag
-      //   | typeof TodoBox
-      //   | typeof TodoFinished
-      //   | typeof TodoDone
-      //   | typeof TodoCancelled
-      | typeof Todo,
+  getItemAt<T extends typeof Line | typeof Todo>(
+    item: T,
     lineNumber: number,
     checkValidity = true
   ): Item | null {
