@@ -15,7 +15,7 @@ class Document {
   text?: string;
 
   constructor(res: vscode.TextDocument, text?: string) {
-    this.textDocument = this.textEditor.document;
+    this.textDocument = res;
     this.text = text;
   }
 
