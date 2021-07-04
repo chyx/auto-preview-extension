@@ -124,7 +124,7 @@ class Line {
   getItemsRanges(
     items: LineItem[],
     negRanges?: vscode.Range | vscode.Range[] | RegExp | RegExp[]
-  ) {
+  ):  {
     const ranges = items.map((item) => this.getItemRanges(item, negRanges)),
       zipped = _.zip(...(ranges as any)), //TSC
       compact = zipped.map(_.compact),
