@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import Consts from '../../consts';
 import TodoDoneItem from '../items/todo_done';
+import Line from './line';
 // import Line from './line';
 
 /* DECORATION TYPES */
