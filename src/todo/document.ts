@@ -55,8 +55,8 @@ class Document {
     });
   }
 
-  getItemAt<T extends typeof Line | typeof Todo>(
-    item: T,
+  getItemAt<T extends Line | Todo>(
+    item: typeof T,
     lineNumber: number,
     checkValidity = true
   ): T | null {
