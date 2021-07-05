@@ -1,5 +1,5 @@
 import * as _ from "lodash";
-import * as moment from "moment";
+import moment from "moment";
 import "moment-precise-range-plugin";
 // import * as toTime from "to-time";
 
