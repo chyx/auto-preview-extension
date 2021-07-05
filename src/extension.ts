@@ -88,7 +88,7 @@ export function activate(context: vscode.ExtensionContext) {
   });
 }
 
-async function showFirstWikiLink(document: TextDocument, viewColumn: number) {
+async function showFirstWikiLink(_unused_document: TextDocument, viewColumn: number) {
   const editor = window.activeTextEditor;
   if (editor === undefined) {
     return;
