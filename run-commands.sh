@@ -11,6 +11,7 @@ npm install --save @types/diff
 npm install --save @types/moment
 
 # Intialize new environment
+npm install
 
 # Publish extensions.
 vsce package
