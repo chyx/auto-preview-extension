@@ -4,6 +4,7 @@ npm install --save diff
 npm install --save moment
 npm install --save to-time
 npm install --save string-matches
+npm install --save sugar-date
 npm install --save moment-precise-range-plugin
 
 npm install --save @types/lodash
