@@ -10,6 +10,8 @@ npm install --save @types/lodash
 npm install --save @types/diff
 npm install --save @types/moment
 
+# Intialize new environment
+
 # Publish extensions.
 vsce package
 vsce publish
