@@ -49,6 +49,10 @@ export function activate(context: vscode.ExtensionContext) {
     "autopreview.openWikiLinkInUpperTab",
     () => openWikiLinkOnTheSpecifiedEditorColumn(Direction.up)
   );
+  let disposableLower = vscode.commands.registerCommand(
+    "autopreview.openWikiLinkInLowerTab",
+    () => openWikiLinkOnTheSpecifiedEditorColumn(Direction.down)
+  );
 
   context.subscriptions.push(disposable2);
 
