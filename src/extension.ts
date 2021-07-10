@@ -145,7 +145,7 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
     window.showInformationMessage("Current editor not found.");
     return;
   }
-  let nextColumn = column + 1;
+  // let nextColumn = column + 1;
   switch (direction) {
     case Direction.left:
       if (column >= 3) {
