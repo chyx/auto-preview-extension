@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
   let disposable2 = vscode.commands.registerCommand(
     "autopreview.openWikiLinkInNextTab",
     () => {
-      openWikiLinkOnTheNextEditorColumn();
+      openWikiLinkOnTheRightEditorColumn();
       // The code you place here will be executed every time your command is executed
     }
   );
@@ -99,7 +99,7 @@ async function showFirstWikiLink(_unused_document: TextDocument, viewColumn: num
   }
 }
 
-async function openWikiLinkOnTheNextEditorColumn() {
+async function openWikiLinkOnTheRightEditorColumn() {
   const column = window.activeTextEditor?.viewColumn;
   if (!column) {
     window.showInformationMessage("Current editor not found.");
