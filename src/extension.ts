@@ -168,6 +168,12 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
         nextColumn = column + 2;
       }
       break;
+    case Direction.up:
+      if (column >= 2) {
+        nextColumn = column - 1;
+      }
+      break;
+
   }
   const document = window.activeTextEditor?.document;
   const position = window.activeTextEditor?.selection.active;
