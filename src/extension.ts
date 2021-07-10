@@ -39,7 +39,8 @@ export function activate(context: vscode.ExtensionContext) {
   let disposable3 = vscode.commands.registerCommand(
     "autopreview.openWikiLinkInPreviousTab",
     () => {
-      openWikiLinkOnThePreviousEditorColumn();
+      openWikiLinkOnTheSpecifiedEditorColumn(Direction.left);
+      // openWikiLinkOnThePreviousEditorColumn();
       // The code you place here will be executed every time your command is executed
     }
   );
