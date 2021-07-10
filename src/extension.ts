@@ -150,6 +150,11 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
         nextColumn = column - 2;
       }
       break;
+    case Direction.right:
+      if (column === vscode.ViewColumn.One) {
+        nextColumn = column - 2;
+      }
+      break;
   }
   const document = window.activeTextEditor?.document;
   const position = window.activeTextEditor?.selection.active;
