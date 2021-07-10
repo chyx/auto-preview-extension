@@ -467,7 +467,7 @@
         "when": "editorTextFocus && !inDebugRepl"
       },
       {
-        "key": "ctrl+d",
+        "key": "ctrl+j",
         "command": "autopreview.openWikiLinkInLowerTab",
         "when": "editorTextFocus && !inDebugRepl"
       },
