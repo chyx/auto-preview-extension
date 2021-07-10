@@ -55,6 +55,8 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(disposable2);
+  context.subscriptions.push(disposableUpper);
+  context.subscriptions.push(disposableLower);
 
   Init.commands(context);
   // context.subscriptions.push(
