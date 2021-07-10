@@ -1,8 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
-import ChangesDecorator from './todo/decorators/changes';
-import DocumentDecorator from './todo/decorators/document';
 
 import {
   window,
@@ -49,11 +47,11 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(disposable2);
 
   Init.commands(context);
-  context.subscriptions.push(
-    vscode.workspace.onDidChangeTextDocument ( ChangesDecorator.onChanges ),
-    vscode.window.onDidChangeActiveTextEditor ( () => DocumentDecorator.update() )
-  );
-  DocumentDecorator.update ();
+  // context.subscriptions.push(
+  //   vscode.workspace.onDidChangeTextDocument ( ChangesDecorator.onChanges ),
+  //   vscode.window.onDidChangeActiveTextEditor ( () => DocumentDecorator.update() )
+  // );
+  // DocumentDecorator.update ();
 
   let alreadyOpenedFirstMarkdown = false;
   let previousUri = "";
