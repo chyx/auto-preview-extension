@@ -152,7 +152,7 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
       break;
     case Direction.right:
       if (column === vscode.ViewColumn.One) {
-        nextColumn = column - 2;
+        nextColumn = column + 2;
       }
       break;
   }
