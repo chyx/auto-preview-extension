@@ -146,7 +146,7 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
   let nextColumn = column + 1;
   switch (direction) {
     case Direction.left:
-      if (column >= 2) {
+      if (column >= 3) {
         nextColumn = column - 2;
       }
       break;
