@@ -174,11 +174,10 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
       }
       break;
     case Direction.down:
-      if (column >= 2) {
-        nextColumn = column - 1;
+      if (column >= 5) {
+        nextColumn = column + 1;
       }
       break;
-
   }
   const document = window.activeTextEditor?.document;
   const position = window.activeTextEditor?.selection.active;
