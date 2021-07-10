@@ -17,7 +17,7 @@
     "onCommand:autopreview.debug",
     "onLanguage:markdown"
   ],
-  "main": "./out/main.js",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
@@ -35,6 +35,10 @@
       {
         "command": "autopreview.toggleDone",
         "title": "Foam Todo: Toggle ToDo Done"
+      },
+      {
+        "command": "autopreview.toggleStart",
+        "title": "Foam Todo: Toggle ToDo Start"
       },
       {
         "command": "autopreview.toggleCancelled",
@@ -460,6 +464,11 @@
       {
         "key": "shift+ctrl+d",
         "command": "autopreview.toggleDone",
+        "when": "editorTextFocus && !inDebugRepl"
+      },
+      {
+        "key": "shift+ctrl+s",
+        "command": "autopreview.toggleStart",
         "when": "editorTextFocus && !inDebugRepl"
       },
       {
