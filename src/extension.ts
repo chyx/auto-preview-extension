@@ -147,6 +147,7 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
   switch (direction) {
     case Direction.left:
       nextColumn = column - 2;
+      break;
   }
   const document = window.activeTextEditor?.document;
   const position = window.activeTextEditor?.selection.active;
