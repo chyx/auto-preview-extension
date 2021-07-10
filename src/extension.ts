@@ -19,13 +19,6 @@ export function activate(context: vscode.ExtensionContext) {
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
-  let disposable = vscode.commands.registerCommand(
-    "autopreview.helloWorld",
-    () => {
-      openWikiLinkOnTheNextEditorColumn();
-      // The code you place here will be executed every time your command is executed
-    }
-  );
 
   let disposable2 = vscode.commands.registerCommand(
     "autopreview.openWikiLinkInNextTab",
@@ -43,7 +36,6 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  context.subscriptions.push(disposable);
   context.subscriptions.push(disposable2);
 
   Init.commands(context);
