@@ -10,8 +10,8 @@ import {
 import Init from "./utils/init";
 
 enum Direction {
-  LEFT;
-  RIGHT;
+  LEFT,
+  RIGHT,
 };
 
 // this method is called when your extension is activated
