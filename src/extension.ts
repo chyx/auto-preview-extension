@@ -143,10 +143,11 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
     window.showInformationMessage("Current editor not found.");
     return;
   }
+  let nextColumn = column + 1;
   switch (direction) {
-
+    case left:
+      nextColumn = column - 2;
   }
-  const nextColumn = column + 1;
   const document = window.activeTextEditor?.document;
   const position = window.activeTextEditor?.selection.active;
   if (document && position) {
