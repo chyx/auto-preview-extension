@@ -174,7 +174,7 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
       }
       break;
     case Direction.down:
-      if (column >= 5) {
+      if (column >= 5 && column + 1 <= window.visibleTextEditors.length) {
         nextColumn = column + 1;
       }
       break;
