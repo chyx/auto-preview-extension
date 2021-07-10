@@ -137,7 +137,7 @@ async function openWikiLinkOnTheRightEditorColumn() {
   }
 }
 
-async function openWikiLinkOnTheSpecifiedEditorColumn() {
+async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
   const column = window.activeTextEditor?.viewColumn;
   if (!column) {
     window.showInformationMessage("Current editor not found.");
