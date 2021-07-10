@@ -47,8 +47,8 @@ export function activate(context: vscode.ExtensionContext) {
 
   let disposableUpper = vscode.commands.registerCommand(
     "autopreview.openWikiLinkInUpperTab",
-    () => openWikiLinkOnTheSpecifiedEditorColumn(Direction.up));
-
+    () => openWikiLinkOnTheSpecifiedEditorColumn(Direction.up)
+  );
 
   context.subscriptions.push(disposable2);
 
