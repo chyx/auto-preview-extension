@@ -145,7 +145,7 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
   }
   let nextColumn = column + 1;
   switch (direction) {
-    case left:
+    case Direction.left:
       nextColumn = column - 2;
   }
   const document = window.activeTextEditor?.document;
