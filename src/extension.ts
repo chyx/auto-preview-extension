@@ -9,6 +9,11 @@ import {
 } from "vscode";
 import Init from "./utils/init";
 
+enum Direction {
+  LEFT;
+  RIGHT;
+};
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
