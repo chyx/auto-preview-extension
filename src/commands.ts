@@ -120,6 +120,10 @@ function toggleCancelled() {
   return callTodosMethod(TodoBox.prototype.toggleCancelled);
 }
 
+function toggleStart() {
+  return callTodosMethod(TodoBox.prototype.toggleStart);
+}
+
 // function toggleStart() {
 //   return callTodosMethod({
 //     checkValidity: true,
@@ -137,4 +141,5 @@ export const MAP = new Map([
   ["toggleBox", toggleBox],
   ["toggleDone", toggleDone],
   ["toggleCancelled", toggleCancelled],
+  ["toggleStart", toggleStart],
 ]);

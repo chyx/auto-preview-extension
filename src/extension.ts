@@ -9,6 +9,13 @@ import {
 } from "vscode";
 import Init from "./utils/init";
 
+enum Direction {
+  left,
+  right,
+  up,
+  down,
+};
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -19,31 +26,37 @@ export function activate(context: vscode.ExtensionContext) {
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
-  let disposable = vscode.commands.registerCommand(
-    "autopreview.helloWorld",
-    () => {
-      openWikiLinkOnTheNextEditorColumn();
-      // The code you place here will be executed every time your command is executed
-    }
-  );
 
   let disposable2 = vscode.commands.registerCommand(
     "autopreview.openWikiLinkInNextTab",
     () => {
-      openWikiLinkOnTheNextEditorColumn();
+      openWikiLinkOnTheSpecifiedEditorColumn(Direction.right);
+      // openWikiLinkOnTheRightEditorColumn();
+      // The code you place here will be executed every time your command is executed
     }
   );
 
   let disposable3 = vscode.commands.registerCommand(
     "autopreview.openWikiLinkInPreviousTab",
     () => {
-      openWikiLinkOnThePreviousEditorColumn();
+      openWikiLinkOnTheSpecifiedEditorColumn(Direction.left);
+      // openWikiLinkOnThePreviousEditorColumn();
       // The code you place here will be executed every time your command is executed
     }
   );
 
-  context.subscriptions.push(disposable);
+  let disposableUpper = vscode.commands.registerCommand(
+    "autopreview.openWikiLinkInUpperTab",
+    () => openWikiLinkOnTheSpecifiedEditorColumn(Direction.up)
+  );
+  let disposableLower = vscode.commands.registerCommand(
+    "autopreview.openWikiLinkInLowerTab",
+    () => openWikiLinkOnTheSpecifiedEditorColumn(Direction.down)
+  );
+
   context.subscriptions.push(disposable2);
+  context.subscriptions.push(disposableUpper);
+  context.subscriptions.push(disposableLower);
 
   Init.commands(context);
   // context.subscriptions.push(
@@ -55,12 +68,12 @@ export function activate(context: vscode.ExtensionContext) {
   let alreadyOpenedFirstMarkdown = false;
   let previousUri = "";
 
-  //   function openMarkdownPreviewSideBySide() {
-  //     commands.executeCommand(markdown_preview_command_id).then(
-  //       () => {},
-  //       (e) => console.error(e)
-  //     );
-  //   }
+//   function openMarkdownPreviewSideBySide() {
+//     commands.executeCommand(markdown_preview_command_id).then(
+//       () => {},
+//       (e) => console.error(e)
+//     );
+//   }
 
   // if (window.activeTextEditor) {
   // 	previewFirstMarkdown();
@@ -79,13 +92,13 @@ export function activate(context: vscode.ExtensionContext) {
         showFirstWikiLink(window.activeTextEditor?.document, 4);
       }
       if (window.activeTextEditor?.viewColumn === 5) {
-        console.log(`Number of editors: ${window.visibleTextEditors.length}`);
+        showFirstWikiLink(window.activeTextEditor?.document, 6);
       }
     }
   });
 }
 
-async function showFirstWikiLink(_unused_document: TextDocument, viewColumn: number) {
+async function showFirstWikiLink(_unusedDocument: TextDocument, viewColumn: number) {
   const editor = window.activeTextEditor;
   if (editor === undefined) {
     return;
@@ -106,7 +119,7 @@ async function showFirstWikiLink(_unused_document: TextDocument, viewColumn: num
   }
 }
 
-async function openWikiLinkOnTheNextEditorColumn() {
+async function openWikiLinkOnTheRightEditorColumn() {
   const column = window.activeTextEditor?.viewColumn;
   if (!column) {
     window.showInformationMessage("Current editor not found.");
@@ -136,6 +149,60 @@ async function openWikiLinkOnTheNextEditorColumn() {
     }
   }
 }
+
+async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
+  const column = window.activeTextEditor?.viewColumn;
+  if (!column) {
+    window.showInformationMessage("Current editor not found.");
+    return;
+  }
+  let nextColumn = column;
+  switch (direction) {
+    case Direction.left:
+      if (column >= 3) {
+        nextColumn = column - 2;
+      }
+      break;
+    case Direction.right:
+      if (column <= 2) {
+        nextColumn = column + 2;
+      }
+      break;
+    case Direction.up:
+      if (column >= 2) {
+        nextColumn = column - 1;
+      }
+      break;
+    case Direction.down:
+      if (column + 2 <= window.visibleTextEditors.length) {
+        nextColumn = column + 1;
+      }
+      break;
+  }
+  const document = window.activeTextEditor?.document;
+  const position = window.activeTextEditor?.selection.active;
+  if (document && position) {
+    const wikiLink = getCurrentWikiLink(document, position);
+    if (wikiLink) {
+      const notes = await vscode.commands.executeCommand<Note[]>(
+        "vscodeMarkdownNotes.notesForWikiLink",
+        wikiLink
+      );
+      if (notes) {
+        await openInPreviewEditor(notes[0].fsPath, nextColumn, false);
+        vscode.commands.executeCommand("workbench.action.closeOtherEditors");
+      }
+    } else {
+      const editor = vscode.window.visibleTextEditors.find(
+        (editor) => editor.viewColumn === nextColumn
+      );
+      if (editor !== undefined) {
+        await openDocumentInEditor(editor.document, nextColumn, false);
+      }
+    }
+  }
+}
+
 
 async function openWikiLinkOnThePreviousEditorColumn() {
   const column = window.activeTextEditor?.viewColumn;
