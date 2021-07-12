@@ -31,7 +31,6 @@ export function activate(context: vscode.ExtensionContext) {
     "autopreview.openWikiLinkInNextTab",
     () => {
       openWikiLinkOnTheNextEditorColumn();
-      // The code you place here will be executed every time your command is executed
     }
   );
 
@@ -56,12 +55,12 @@ export function activate(context: vscode.ExtensionContext) {
   let alreadyOpenedFirstMarkdown = false;
   let previousUri = "";
 
-//   function openMarkdownPreviewSideBySide() {
-//     commands.executeCommand(markdown_preview_command_id).then(
-//       () => {},
-//       (e) => console.error(e)
-//     );
-//   }
+  //   function openMarkdownPreviewSideBySide() {
+  //     commands.executeCommand(markdown_preview_command_id).then(
+  //       () => {},
+  //       (e) => console.error(e)
+  //     );
+  //   }
 
   // if (window.activeTextEditor) {
   // 	previewFirstMarkdown();
@@ -76,11 +75,11 @@ export function activate(context: vscode.ExtensionContext) {
       if (window.activeTextEditor?.viewColumn === 1) {
         showFirstWikiLink(window.activeTextEditor?.document, 2);
       }
-      if (window.activeTextEditor?.viewColumn === 2) {
-        showFirstWikiLink(window.activeTextEditor?.document, 3);
-      }
       if (window.activeTextEditor?.viewColumn === 3) {
         showFirstWikiLink(window.activeTextEditor?.document, 4);
+      }
+      if (window.activeTextEditor?.viewColumn === 5) {
+        console.log(`Number of editors: ${window.visibleTextEditors.length}`);
       }
     }
   });
