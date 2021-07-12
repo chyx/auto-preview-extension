@@ -31,7 +31,6 @@ export function activate(context: vscode.ExtensionContext) {
     "autopreview.openWikiLinkInNextTab",
     () => {
       openWikiLinkOnTheSpecifiedEditorColumn(Direction.right);
-      // openWikiLinkOnTheRightEditorColumn();
       // The code you place here will be executed every time your command is executed
     }
   );
@@ -115,37 +114,6 @@ async function showFirstWikiLink(_unusedDocument: TextDocument, viewColumn: numb
     if (notes) {
       // vscode.window.showInformationMessage('First Link: ' + notes[0].fsPath);
       openInPreviewEditor(notes[0].fsPath, viewColumn, true);
-    }
-  }
-}
-
-async function openWikiLinkOnTheRightEditorColumn() {
-  const column = window.activeTextEditor?.viewColumn;
-  if (!column) {
-    window.showInformationMessage("Current editor not found.");
-    return;
-  }
-  const nextColumn = column + 1;
-  const document = window.activeTextEditor?.document;
-  const position = window.activeTextEditor?.selection.active;
-  if (document && position) {
-    const wikiLink = getCurrentWikiLink(document, position);
-    if (wikiLink) {
-      const notes = await vscode.commands.executeCommand<Note[]>(
-        "vscodeMarkdownNotes.notesForWikiLink",
-        wikiLink
-      );
-      if (notes) {
-        await openInPreviewEditor(notes[0].fsPath, nextColumn, false);
-        vscode.commands.executeCommand("workbench.action.closeOtherEditors");
-      }
-    } else {
-      const editor = vscode.window.visibleTextEditors.find(
-        (editor) => editor.viewColumn === nextColumn
-      );
-      if (editor !== undefined) {
-        await openDocumentInEditor(editor.document, nextColumn, false);
-      }
     }
   }
 }
