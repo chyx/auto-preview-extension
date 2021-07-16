@@ -130,7 +130,7 @@ async function openWikiLinkOnTheSpecifiedEditorColumn(direction: Direction) {
       }
       break;
     case Direction.right:
-      if (column <= 2) {
+      if (column + 2 <= window.visibleTextEditors.length) {
         nextColumn = column + 2;
       }
       break;
